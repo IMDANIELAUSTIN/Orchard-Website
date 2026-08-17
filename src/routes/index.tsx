@@ -4,6 +4,7 @@ import { Hero } from "@/components/landing/Hero";
 import { FeatureGrid } from "@/components/landing/FeatureGrid";
 import { Showcase } from "@/components/landing/Showcase";
 import { Community } from "@/components/landing/Community";
+import { Newsletter } from "@/components/landing/Newsletter";
 import { Download, SiteFooter } from "@/components/landing/Download";
 
 const title = "Northlight — Simple, Powerful Bitcoin Wallet";
