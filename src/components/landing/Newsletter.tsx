@@ -24,7 +24,7 @@ export function Newsletter() {
     const result = emailSchema.safeParse(email);
     if (!result.success) {
       setStatus("error");
-      setMessage(result.error.issues[0].message);
+      setMessage(result.error.issues[0]?.message ?? "Please enter a valid email address.");
       return;
     }
 
