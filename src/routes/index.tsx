@@ -34,6 +34,7 @@ function Index() {
         <FeatureGrid />
         <Showcase />
         <Community />
+        <Newsletter />
         <Download />
       </main>
       <SiteFooter />
