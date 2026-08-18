@@ -1,8 +1,20 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { z } from "zod";
 import { Check, Loader2, TriangleAlert } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { getRecaptchaSiteKey, subscribeToNewsletter } from "@/lib/newsletter.functions";
+
+declare global {
+  interface Window {
+    grecaptcha?: {
+      ready: (cb: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
 
 const emailSchema = z
   .string()
@@ -13,10 +25,46 @@ const emailSchema = z
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+function useRecaptcha(siteKey: string | null | undefined) {
+  const loaded = useRef(false);
+
+  useEffect(() => {
+    if (!siteKey || loaded.current) return;
+    loaded.current = true;
+    const script = document.createElement("script");
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  }, [siteKey]);
+
+  return async (): Promise<string | undefined> => {
+    if (!siteKey || !window.grecaptcha) return undefined;
+    return new Promise<string | undefined>((resolve) => {
+      window.grecaptcha!.ready(() => {
+        window
+          .grecaptcha!.execute(siteKey, { action: "newsletter_signup" })
+          .then(resolve)
+          .catch(() => resolve(undefined));
+      });
+    });
+  };
+}
+
 export function Newsletter() {
   const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+
+  const fetchSiteKey = useServerFn(getRecaptchaSiteKey);
+  const subscribe = useServerFn(subscribeToNewsletter);
+  const { data: keyData } = useQuery({
+    queryKey: ["recaptcha-site-key"],
+    queryFn: () => fetchSiteKey(),
+    staleTime: Infinity,
+  });
+  const executeRecaptcha = useRecaptcha(keyData?.siteKey);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -32,10 +80,23 @@ export function Newsletter() {
     setMessage("");
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 700));
-      setStatus("success");
-      setMessage("You're on the list. Watch your inbox for release notes.");
-      setEmail("");
+      const captchaToken = await executeRecaptcha();
+      const response = await subscribe({
+        data: {
+          email: result.data,
+          ...(captchaToken ? { captchaToken } : {}),
+          ...(company ? { company } : {}),
+        },
+      });
+
+      if (response.status === "subscribed" || response.status === "already-subscribed") {
+        setStatus("success");
+        setMessage(response.message);
+        setEmail("");
+      } else {
+        setStatus("error");
+        setMessage(response.message);
+      }
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again in a moment.");
@@ -80,6 +141,17 @@ export function Newsletter() {
             }}
             className="h-11 flex-1"
           />
+          {/* Honeypot field — hidden from real users, catches simple bots. */}
+          <input
+            type="text"
+            name="company"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            value={company}
+            onChange={(event) => setCompany(event.target.value)}
+            className="hidden"
+          />
           <Button type="submit" size="lg" disabled={status === "submitting"}>
             {status === "submitting" ? (
               <>
@@ -113,6 +185,30 @@ export function Newsletter() {
             </span>
           ) : null}
         </p>
+
+        {keyData?.siteKey ? (
+          <p className="mt-3 text-xs text-muted-foreground">
+            Protected by reCAPTCHA — Google's{" "}
+            <a
+              href="https://policies.google.com/privacy"
+              className="underline underline-offset-4"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Privacy Policy
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://policies.google.com/terms"
+              className="underline underline-offset-4"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Terms
+            </a>{" "}
+            apply.
+          </p>
+        ) : null}
       </div>
     </section>
   );

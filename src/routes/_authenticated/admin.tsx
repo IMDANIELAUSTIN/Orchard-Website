@@ -1,0 +1,157 @@
+import { useMemo, useState } from "react";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
+import { Download, LogOut, RefreshCw } from "lucide-react";
+import { listSubscribers, type Subscriber } from "@/lib/admin.functions";
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
+const title = "Subscribers — Northlight Admin";
+const description = "View and export Northlight newsletter subscribers.";
+
+export const Route = createFileRoute("/_authenticated/admin")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "noindex" },
+    ],
+  }),
+  component: AdminPage,
+});
+
+function toCsv(rows: Subscriber[]) {
+  const header = ["email", "status", "source", "confirmation_email_status", "created_at"];
+  const escape = (value: string) => `"${value.replaceAll('"', '""')}"`;
+  const lines = rows.map((row) =>
+    [row.email, row.status, row.source, row.confirmation_email_status, row.created_at]
+      .map((value) => escape(String(value ?? "")))
+      .join(","),
+  );
+  return [header.join(","), ...lines].join("\n");
+}
+
+function AdminPage() {
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const fetchSubscribers = useServerFn(listSubscribers);
+  const [search, setSearch] = useState("");
+
+  const { data, isLoading, isFetching, error, refetch } = useQuery({
+    queryKey: ["subscribers"],
+    queryFn: () => fetchSubscribers(),
+  });
+
+  const subscribers = data?.subscribers ?? [];
+  const filtered = useMemo(() => {
+    const term = search.trim().toLowerCase();
+    if (!term) return subscribers;
+    return subscribers.filter((row) => row.email.toLowerCase().includes(term));
+  }, [subscribers, search]);
+
+  const handleExport = () => {
+    const blob = new Blob([toCsv(filtered)], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `newsletter-subscribers-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleSignOut = async () => {
+    await queryClient.cancelQueries();
+    queryClient.clear();
+    await supabase.auth.signOut();
+    navigate({ to: "/auth", replace: true });
+  };
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="border-b border-border">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-6">
+          <div>
+            <h1 className="text-2xl font-semibold tracking-tight">Newsletter subscribers</h1>
+            <p className="text-sm text-muted-foreground">
+              {isLoading ? "Loading…" : `${subscribers.length} total`}
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <Button variant="outline" size="sm" onClick={() => refetch()} disabled={isFetching}>
+              <RefreshCw className={`size-4 ${isFetching ? "animate-spin" : ""}`} aria-hidden />
+              Refresh
+            </Button>
+            <Button size="sm" onClick={handleExport} disabled={filtered.length === 0}>
+              <Download className="size-4" aria-hidden />
+              Export CSV
+            </Button>
+            <Button variant="ghost" size="sm" onClick={handleSignOut}>
+              <LogOut className="size-4" aria-hidden />
+              Sign out
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-5xl px-6 py-8">
+        {error ? (
+          <p className="text-sm text-destructive">Could not load subscribers. Try refreshing.</p>
+        ) : data && !data.isAdmin ? (
+          <p className="text-sm text-muted-foreground">
+            Your account doesn't have admin access yet. Ask an existing admin to grant it.
+          </p>
+        ) : (
+          <>
+            <Input
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder="Search by email"
+              className="mb-6 max-w-xs"
+              aria-label="Search subscribers by email"
+            />
+
+            <div className="overflow-x-auto rounded-lg border border-border">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-card text-muted-foreground">
+                  <tr>
+                    <th className="px-4 py-3 font-medium">Email</th>
+                    <th className="px-4 py-3 font-medium">Status</th>
+                    <th className="px-4 py-3 font-medium">Confirmation email</th>
+                    <th className="px-4 py-3 font-medium">Signed up</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filtered.map((row) => (
+                    <tr key={row.id} className="border-t border-border">
+                      <td className="px-4 py-3">{row.email}</td>
+                      <td className="px-4 py-3 text-muted-foreground">{row.status}</td>
+                      <td className="px-4 py-3 text-muted-foreground">
+                        {row.confirmation_email_status}
+                      </td>
+                      <td className="px-4 py-3 text-muted-foreground">
+                        {new Date(row.created_at).toLocaleString()}
+                      </td>
+                    </tr>
+                  ))}
+                  {!isLoading && filtered.length === 0 ? (
+                    <tr>
+                      <td colSpan={4} className="px-4 py-8 text-center text-muted-foreground">
+                        No subscribers yet.
+                      </td>
+                    </tr>
+                  ) : null}
+                </tbody>
+              </table>
+            </div>
+          </>
+        )}
+      </main>
+    </div>
+  );
+}
