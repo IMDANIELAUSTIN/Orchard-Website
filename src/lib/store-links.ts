@@ -1,5 +1,6 @@
 // Platform downloads and community links for the Orchard super-app
 export const STORE_LINKS = {
+  testflight: "https://apps.apple.com/app/orchard",
   ios: "https://apps.apple.com/app/orchard",
   macos: "https://apps.apple.com/app/orchard-macos",
   watchos: "https://apps.apple.com/app/orchard",
