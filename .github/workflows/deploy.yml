@@ -41,6 +41,9 @@ jobs:
           VITE_SUPABASE_PUBLISHABLE_KEY: "placeholder-publishable-key"
         run: bun run build
 
+      - name: Generate static HTML pages for GitHub Pages
+        run: bun scripts/prerender.ts
+
       - name: Prepare static output for GitHub Pages
         run: |
           # Determine the build output folder (.output/public for Nitro/TanStack Start or dist for standard Vite)
