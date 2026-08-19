@@ -9,7 +9,7 @@ import { BlogSection } from "@/components/landing/BlogSection";
 import { Newsletter } from "@/components/landing/Newsletter";
 import { Download, SiteFooter } from "@/components/landing/Download";
 
-const title = "Orchard — Resilient Knowledge, Mesh Network & Local Exchange";
+const title = "Orchard — Real Social Network";
 const description =
   "Open-source, decentralized, off-grid-first multimedia knowledge hub, P2P mesh network, local community resilience exchange, and open-educational super-app built in native SwiftUI.";
 
