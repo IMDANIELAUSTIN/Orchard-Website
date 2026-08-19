@@ -12,4 +12,22 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        "/",
+        "/pricing",
+        "/blog",
+        "/blog/offline-first-human-knowledge",
+        "/blog/mesh-networking-lora-bluetooth",
+        "/blog/unifying-fediverse-mastodon-bluesky",
+        "/blog/local-resilience-exchanges-mutual-aid",
+        "/rss.xml",
+        "/sitemap.xml",
+        "/auth",
+        "/admin",
+      ],
+    },
+  },
 });

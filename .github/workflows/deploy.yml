@@ -36,6 +36,8 @@ jobs:
         run: bun install
 
       - name: Build project
+        env:
+          NITRO_PRESET: github-pages
         run: bun run build
 
       - name: Prepare static output for GitHub Pages
@@ -51,6 +53,7 @@ jobs:
           fi
 
           echo "Deploying from $OUT_DIR"
+          ls -la "$OUT_DIR"
 
           # Disable Jekyll processing on GitHub Pages
           touch "$OUT_DIR/.nojekyll"
