@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/accordion";
 import { STORE_LINKS } from "@/lib/store-links";
 
-const title = "Pricing & Plans — Northlight Bitcoin Wallet";
+const title = "Pricing & Plans — Orchard Bitcoin Wallet";
 const description =
   "100% free and open-source self-custody bitcoin wallet. Explore standard features, power user supporter options, and institutional custody.";
 
@@ -48,7 +48,7 @@ const pricingTiers = [
     period: "forever",
     description: "The complete, uncompromising self-custody wallet for everyone.",
     featured: false,
-    ctaLabel: "Download Northlight",
+    ctaLabel: "Download Orchard",
     ctaHref: "/#download",
     features: [
       "Unlimited single-sig & 2-of-3 multisig vaults",
@@ -72,7 +72,7 @@ const pricingTiers = [
     description: "Cloud convenience, optimized routing, and funding open-source development.",
     featured: true,
     ctaLabel: "Become a Supporter",
-    ctaHref: "mailto:support@orchard-website.lovable.app?subject=Northlight%20Supporter%20Plan",
+    ctaHref: "mailto:support@orchard-website.lovable.app?subject=Orchard%20Supporter%20Plan",
     features: [
       "Everything in Community, plus:",
       "End-to-end encrypted multi-device watch-only sync",
@@ -93,7 +93,7 @@ const pricingTiers = [
     description: "High-assurance custody workflows, custom policies, and dedicated engineering.",
     featured: false,
     ctaLabel: "Contact Security Team",
-    ctaHref: "mailto:support@orchard-website.lovable.app?subject=Northlight%20Enterprise%20Inquiry",
+    ctaHref: "mailto:support@orchard-website.lovable.app?subject=Orchard%20Enterprise%20Inquiry",
     features: [
       "Everything in Supporter, plus:",
       "Custom M-of-N threshold signing schemes (e.g. 3-of-5, time-locks)",
@@ -147,14 +147,14 @@ const featureMatrix = [
 
 const faqs = [
   {
-    question: "Is Northlight really 100% free?",
+    question: "Is Orchard really 100% free?",
     answer:
-      "Yes! Northlight is open-source software licensed under MIT. You can download it on iOS, Android, and Desktop and use every single core feature—including multisig vaults, hardware signers, custom nodes, and Lightning—without ever paying a cent or registering an account.",
+      "Yes! Orchard is open-source software licensed under MIT. You can download it on iOS, Android, and Desktop and use every single core feature—including multisig vaults, hardware signers, custom nodes, and Lightning—without ever paying a cent or registering an account.",
   },
   {
-    question: "Does Northlight take any fees from my transactions?",
+    question: "Does Orchard take any fees from my transactions?",
     answer:
-      "No. Northlight takes zero cut (0 bps) on transactions. You only pay standard Bitcoin network mining fees (or tiny fractions of a cent on Lightning), which go directly and entirely to the decentralized network miners and routing nodes. You always choose your own sat/vB fee rate.",
+      "No. Orchard takes zero cut (0 bps) on transactions. You only pay standard Bitcoin network mining fees (or tiny fractions of a cent on Lightning), which go directly and entirely to the decentralized network miners and routing nodes. You always choose your own sat/vB fee rate.",
   },
   {
     question: "What is the Supporter tier for?",
@@ -164,17 +164,17 @@ const faqs = [
   {
     question: "Do you ever have access to my private keys or funds?",
     answer:
-      "Never. Northlight is non-custodial. Your keys are generated and encrypted locally on your hardware device and are never sent to any server. We cannot access, freeze, or recover your funds—you maintain complete sovereign ownership.",
+      "Never. Orchard is non-custodial. Your keys are generated and encrypted locally on your hardware device and are never sent to any server. We cannot access, freeze, or recover your funds—you maintain complete sovereign ownership.",
   },
   {
-    question: "What happens if Northlight shuts down or disappears?",
+    question: "What happens if Orchard shuts down or disappears?",
     answer:
-      "Your funds remain completely safe. Northlight adheres strictly to Bitcoin industry standards (BIP39, BIP32, BIP84, BIP174 PSBT, and Output Descriptors). You can restore your seed phrases and wallet descriptors into any other compatible wallet (such as Sparrow, Electrum, or BlueWallet) at any time.",
+      "Your funds remain completely safe. Orchard adheres strictly to Bitcoin industry standards (BIP39, BIP32, BIP84, BIP174 PSBT, and Output Descriptors). You can restore your seed phrases and wallet descriptors into any other compatible wallet (such as Sparrow, Electrum, or BlueWallet) at any time.",
   },
   {
     question: "Can I connect my own private Bitcoin node?",
     answer:
-      "Yes. You can connect Northlight to your own Bitcoin Core, Electrs, Fulcrum, or EPS server over SSL or Tor. This ensures 100% privacy with zero third-party data queries.",
+      "Yes. You can connect Orchard to your own Bitcoin Core, Electrs, Fulcrum, or EPS server over SSL or Tor. This ensures 100% privacy with zero third-party data queries.",
   },
 ];
 
@@ -200,7 +200,7 @@ function PricingPage() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              Northlight is built for financial sovereignty. No subscription is required to hold your
+              Orchard is built for financial sovereignty. No subscription is required to hold your
               own keys, build multisig vaults, or pay over Lightning.
             </p>
 
@@ -316,7 +316,7 @@ function PricingPage() {
                   0% wallet markup. You only pay miners.
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Many wallets add a hidden 0.5% – 2% surcharge on sends or swaps. Northlight is built
+                  Many wallets add a hidden 0.5% – 2% surcharge on sends or swaps. Orchard is built
                   on true Bitcoin principles: we charge 0% on transactions. You only pay network miner
                   fees, which you customize down to the exact sat/vB.
                 </p>

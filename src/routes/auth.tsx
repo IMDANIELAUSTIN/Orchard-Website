@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const title = "Sign in — Northlight Admin";
-const description = "Sign in to manage Northlight newsletter subscribers.";
+const title = "Sign in — Orchard Admin";
+const description = "Sign in to manage Orchard newsletter subscribers.";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({

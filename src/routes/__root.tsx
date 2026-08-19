@@ -77,15 +77,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Northlight — Simple, Powerful Bitcoin Wallet" },
+      { title: "Orchard — Simple, Powerful Bitcoin Wallet" },
       {
         name: "description",
         content:
-          "Northlight is an open-source, self-custody bitcoin wallet with multisig vaults, fee control and Lightning payments.",
+          "Orchard is an open-source, self-custody bitcoin wallet with multisig vaults, fee control and Lightning payments.",
       },
-      { name: "author", content: "Northlight Wallet" },
-      { property: "og:site_name", content: "Northlight Wallet" },
-      { property: "og:title", content: "Northlight — Simple, Powerful Bitcoin Wallet" },
+      { name: "author", content: "Orchard Wallet" },
+      { property: "og:site_name", content: "Orchard Wallet" },
+      { property: "og:title", content: "Orchard — Simple, Powerful Bitcoin Wallet" },
       {
         property: "og:description",
         content:
@@ -104,7 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "alternate",
         type: "application/rss+xml",
-        title: "Northlight Blog RSS",
+        title: "Orchard Blog RSS",
         href: "https://orchard-website.lovable.app/rss.xml",
       },
     ],

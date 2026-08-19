@@ -12,13 +12,13 @@ export const Route = createFileRoute("/blog/$slug")({
   },
   head: ({ params, loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Post not found — Northlight" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Post not found — Orchard" }, { name: "robots", content: "noindex" }] };
     }
     const { post } = loaderData;
     const url = `${SITE_URL}/blog/${params.slug}`;
     return {
       meta: [
-        { title: `${post.title} — Northlight Blog` },
+        { title: `${post.title} — Orchard Blog` },
         { name: "description", content: post.excerpt },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },

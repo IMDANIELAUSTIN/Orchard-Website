@@ -18,7 +18,7 @@ export function SiteHeader() {
           <span className="inline-flex size-8 items-center justify-center rounded-lg bg-brand">
             <Bitcoin className="size-4 text-primary-foreground" aria-hidden="true" />
           </span>
-          Northlight
+          Orchard
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">

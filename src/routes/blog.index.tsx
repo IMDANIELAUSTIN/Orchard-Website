@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/landing/Download";
 import { Button } from "@/components/ui/button";
 import { sortedPosts, formatDate } from "@/lib/blog";
 
-const title = "Blog — Northlight Bitcoin Wallet";
+const title = "Blog — Orchard Bitcoin Wallet";
 const description =
-  "Practical writing on bitcoin self-custody, multisig vaults, fee strategy and Lightning payments from the Northlight team.";
+  "Practical writing on bitcoin self-custody, multisig vaults, fee strategy and Lightning payments from the Orchard team.";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/blog/")({
       {
         rel: "alternate",
         type: "application/rss+xml",
-        title: "Northlight Blog RSS",
+        title: "Orchard Blog RSS",
         href: "https://orchard-website.lovable.app/rss.xml",
       },
     ],
@@ -43,7 +43,7 @@ function BlogIndex() {
             <h1 className="text-4xl font-semibold tracking-tight">Blog</h1>
             <p className="mt-3 max-w-xl text-muted-foreground">
               Notes on custody, privacy, fees and Lightning — written by the people building
-              Northlight.
+              Orchard.
             </p>
           </div>
           <Button variant="outline" asChild>

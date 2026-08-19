@@ -10,8 +10,8 @@ export function Download() {
           Take custody of your bitcoin today
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-          Free, open source, and available on the devices you already use. No account, no email
-          address, no waiting list.
+          Free, open source, and available on the devices you already use. No account, no KYC,
+          no third-party custody.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -44,7 +44,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground sm:flex-row">
-        <p>© {new Date().getFullYear()} Northlight Wallet. Open source software.</p>
+        <p>© {new Date().getFullYear()} Orchard Wallet. Open source software.</p>
         <nav className="flex flex-wrap gap-6">
           <a href="/#features" className="transition-colors hover:text-foreground">
             Features

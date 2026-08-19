@@ -8,8 +8,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const title = "Subscribers — Northlight Admin";
-const description = "View and export Northlight newsletter subscribers.";
+const title = "Subscribers — Orchard Admin";
+const description = "View and export Orchard newsletter subscribers.";
 
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({

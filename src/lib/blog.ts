@@ -21,7 +21,7 @@ export const posts: BlogPost[] = [
     readingTime: "6 min read",
     body: [
       "Every custodial failure of the last decade rhymes: deposits are pooled, the pool is lent out, and the withdrawal queue closes on a Friday afternoon. When you hold your own keys, none of that machinery sits between you and your coins.",
-      "Self-custody is not about distrusting every company. It is about removing the single point of failure that turns someone else's bad quarter into your loss. Northlight keeps the seed on your device, encrypted, and never transmits it anywhere.",
+      "Self-custody is not about distrusting every company. It is about removing the single point of failure that turns someone else's bad quarter into your loss. Orchard keeps the seed on your device, encrypted, and never transmits it anywhere.",
       "The trade-off is responsibility. Write the seed down, store it somewhere fire-resistant, and test a restore before you move meaningful amounts. That fifteen minutes is the entire cost of admission.",
     ],
   },
@@ -36,7 +36,7 @@ export const posts: BlogPost[] = [
     body: [
       "A multisig vault splits spending authority across several keys. A two-of-three vault means any two of your three keys can move funds, so losing one key is inconvenient rather than catastrophic.",
       "A common layout: one key on your phone, one on a hardware signer at home, one on a hardware signer at a relative's house. A thief with your phone has nothing. A house fire costs you one key, not the vault.",
-      "Northlight walks you through key generation, backs up the wallet descriptor alongside each seed, and lets you rehearse a recovery on a watch-only copy before you fund anything.",
+      "Orchard walks you through key generation, backs up the wallet descriptor alongside each seed, and lets you rehearse a recovery on a watch-only copy before you fund anything.",
     ],
   },
   {
@@ -50,7 +50,7 @@ export const posts: BlogPost[] = [
     body: [
       "Fees are an auction for block space, not a fixed price. When the mempool is thin, a one sat/vB transaction confirms overnight. When it is congested, the same transaction can sit for days.",
       "Ask one question before sending: does this need to confirm in the next hour? If not, pick a low rate and enable replace-by-fee so you can bump it later without losing anything.",
-      "Northlight shows the live mempool distribution next to the fee slider, so the number you choose is grounded in what is actually pending rather than a black-box estimate.",
+      "Orchard shows the live mempool distribution next to the fee slider, so the number you choose is grounded in what is actually pending rather than a black-box estimate.",
     ],
   },
   {
@@ -64,7 +64,7 @@ export const posts: BlogPost[] = [
     body: [
       "Treat on-chain balances as savings and Lightning as your spending wallet. Keep only what you would carry in cash on the Lightning side and top it up when it runs low.",
       "Payments settle in under a second and cost a fraction of a cent, which makes small purchases viable in a way base-layer transactions never were.",
-      "Northlight keeps both balances in one interface, so moving value between them is two taps rather than a manual channel-management exercise.",
+      "Orchard keeps both balances in one interface, so moving value between them is two taps rather than a manual channel-management exercise.",
     ],
   },
 ];

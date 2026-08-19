@@ -7,7 +7,7 @@ import { BlogSection } from "@/components/landing/BlogSection";
 import { Newsletter } from "@/components/landing/Newsletter";
 import { Download, SiteFooter } from "@/components/landing/Download";
 
-const title = "Northlight — Simple, Powerful Bitcoin Wallet";
+const title = "Orchard — Simple, Powerful Bitcoin Wallet";
 const description =
   "Self-custody bitcoin wallet with multisig vaults, fee control, hardware wallet support and Lightning. Open source, private, free on iOS, Android and desktop.";
 

@@ -7,7 +7,7 @@ export function Hero() {
     <section id="top" className="bg-hero">
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 text-center sm:pt-28">
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs tracking-wide text-muted-foreground uppercase">
-          Open source · Non-custodial
+          Open source · Non-custodial · Seed Security
         </span>
 
         <h1 className="mx-auto mt-8 max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
@@ -16,8 +16,8 @@ export function Hero() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-          Store, send and receive bitcoin with keys that never leave your device — plus multisig,
-          fee control and hardware wallet support when you want to go deeper.
+          Cultivate and protect your bitcoin with keys that never leave your device — complete with
+          multisig vaults, granular fee control, hardware signer support, and instant Lightning.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -42,7 +42,7 @@ export function Hero() {
         <div className="mt-16">
           <img
             src={appPreview}
-            alt="Northlight bitcoin wallet app shown on two smartphones with balance and transaction screens"
+            alt="Orchard bitcoin wallet app shown on two smartphones with balance and transaction screens"
             width={1200}
             height={912}
             className="mx-auto w-full max-w-3xl rounded-3xl shadow-glow"
