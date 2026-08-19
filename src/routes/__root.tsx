@@ -101,6 +101,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      {
+        rel: "alternate",
+        type: "application/rss+xml",
+        title: "Northlight Blog RSS",
+        href: "https://orchard-website.lovable.app/rss.xml",
+      },
     ],
   }),
   shellComponent: RootShell,

@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/landing/SiteHeader";
 import { Hero } from "@/components/landing/Hero";
 import { FeatureGrid } from "@/components/landing/FeatureGrid";
 import { Showcase } from "@/components/landing/Showcase";
-import { Community } from "@/components/landing/Community";
+import { BlogSection } from "@/components/landing/BlogSection";
 import { Newsletter } from "@/components/landing/Newsletter";
 import { Download, SiteFooter } from "@/components/landing/Download";
 
@@ -36,7 +36,7 @@ function Index() {
         <Hero />
         <FeatureGrid />
         <Showcase />
-        <Community />
+        <BlogSection />
         <Newsletter />
         <Download />
       </main>
