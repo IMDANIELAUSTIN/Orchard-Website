@@ -15,13 +15,13 @@ export function Download() {
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <Button size="lg" asChild>
-            <a href="https://apps.apple.com/app/apple-store/id1376878040">
+            <a href="#newsletter">
               <Apple className="size-4" aria-hidden="true" />
               Download for iOS
             </a>
           </Button>
           <Button size="lg" variant="secondary" asChild>
-            <a href="https://play.google.com/store/apps/details?id=io.bluewallet.bluewallet">
+            <a href="#newsletter">
               <Smartphone className="size-4" aria-hidden="true" />
               Download for Android
             </a>
