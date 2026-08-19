@@ -1,12 +1,6 @@
 # Orchard Website
 
-Let's copy this webpage https://bluewallet.io
-
-This project was built with [Lovable](https://lovable.dev).
-
 **Live app**: https://shiny-coin-chest.lovable.app
-
-## Build with Lovable
 
 Continue developing this project in the [Lovable editor](https://lovable.dev/projects/947b46e5-c7a1-4974-aced-f0c760a68642).
 
