@@ -38,17 +38,6 @@ export function Hero() {
             </a>
           </Button>
 
-          <Button
-            size="lg"
-            variant="outline"
-            className="h-13 px-7 rounded-full border border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] hover:bg-[#EAE5E2] dark:hover:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] font-semibold text-base shadow-sm transition-all"
-            asChild
-          >
-            <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer">
-              <Github className="size-5 mr-1" aria-hidden="true" display="false"/>
-              View on GitHub
-            </a>
-          </Button>
         </div>
 
         <p className="reveal delay-3 mt-4 text-xs font-medium text-[#290B00]/60 dark:text-[#F6F4F3]/60">
