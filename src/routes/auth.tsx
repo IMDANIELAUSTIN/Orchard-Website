@@ -80,18 +80,18 @@ function AuthPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-6 py-16">
-      <div className="w-full max-w-sm rounded-xl border border-border bg-card p-8 shadow-card">
-        <h1 className="text-2xl font-semibold tracking-tight">
+    <div className="flex min-h-screen items-center justify-center bg-[#F5F5F7] px-6 py-16">
+      <div className="w-full max-w-sm rounded-[28px] border border-black/[0.06] bg-white p-8 sm:p-10 shadow-card">
+        <h1 className="text-2xl font-bold tracking-tight text-[#1D1D1F]">
           {mode === "signin" ? "Admin sign in" : "Create admin account"}
         </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-[#86868B]">
           Manage newsletter subscribers and exports.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>
           <div className="space-y-2">
-            <Label htmlFor="admin-email">Email</Label>
+            <Label htmlFor="admin-email" className="text-xs font-semibold text-[#1D1D1F]">Email</Label>
             <Input
               id="admin-email"
               type="email"
@@ -99,10 +99,11 @@ function AuthPage() {
               maxLength={255}
               value={email}
               onChange={(event) => setEmail(event.target.value)}
+              className="h-11 rounded-xl border-black/[0.1] bg-[#F5F5F7] text-[#1D1D1F] focus:bg-white"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="admin-password">Password</Label>
+            <Label htmlFor="admin-password" className="text-xs font-semibold text-[#1D1D1F]">Password</Label>
             <Input
               id="admin-password"
               type="password"
@@ -110,17 +111,18 @@ function AuthPage() {
               maxLength={72}
               value={password}
               onChange={(event) => setPassword(event.target.value)}
+              className="h-11 rounded-xl border-black/[0.1] bg-[#F5F5F7] text-[#1D1D1F] focus:bg-white"
             />
           </div>
 
-          <Button type="submit" className="w-full" disabled={busy}>
+          <Button type="submit" className="w-full h-11 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-semibold shadow-sm" disabled={busy}>
             {busy ? "Please wait…" : mode === "signin" ? "Sign in" : "Create account"}
           </Button>
         </form>
 
         <p role="status" aria-live="polite" className="mt-4 min-h-5 text-sm">
-          {error ? <span className="text-destructive">{error}</span> : null}
-          {notice ? <span className="text-accent">{notice}</span> : null}
+          {error ? <span className="text-destructive font-medium">{error}</span> : null}
+          {notice ? <span className="text-rose-600 font-medium">{notice}</span> : null}
         </p>
 
         <button
@@ -130,7 +132,7 @@ function AuthPage() {
             setError("");
             setNotice("");
           }}
-          className="mt-2 text-sm text-muted-foreground underline-offset-4 hover:underline"
+          className="mt-2 text-xs font-medium text-[#86868B] hover:text-[#1D1D1F]"
         >
           {mode === "signin" ? "Need an account? Sign up" : "Already have an account? Sign in"}
         </button>

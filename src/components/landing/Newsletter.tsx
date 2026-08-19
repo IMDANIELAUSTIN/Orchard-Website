@@ -106,10 +106,10 @@ export function Newsletter() {
   const isInvalid = status === "error";
 
   return (
-    <section id="newsletter" className="border-t border-border py-24">
-      <div className="mx-auto max-w-3xl px-6 text-center">
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Stay in the loop</h2>
-        <p className="mx-auto mt-3 max-w-lg text-muted-foreground">
+    <section id="newsletter" className="border-t border-black/[0.06] py-24 bg-white">
+      <div className="reveal mx-auto max-w-3xl px-6 text-center">
+        <h2 className="text-3xl font-extrabold tracking-tight text-[#1D1D1F] sm:text-4xl">Stay in the loop</h2>
+        <p className="mx-auto mt-3 max-w-lg text-[#86868B] text-base leading-relaxed">
           Occasional updates on new releases, mesh radio blueprints, and offline educational archives. Zero spam, unsubscribe anytime.
         </p>
 
@@ -138,7 +138,7 @@ export function Newsletter() {
                 setMessage("");
               }
             }}
-            className="h-11 flex-1"
+            className="h-12 flex-1 rounded-full border-black/[0.1] bg-[#F5F5F7] px-5 text-[#1D1D1F] placeholder:text-[#86868B] focus:bg-white"
           />
           {/* Honeypot field — hidden from real users, catches simple bots. */}
           <input
@@ -151,7 +151,12 @@ export function Newsletter() {
             onChange={(event) => setCompany(event.target.value)}
             className="hidden"
           />
-          <Button type="submit" size="lg" disabled={status === "submitting"}>
+          <Button
+            type="submit"
+            size="lg"
+            disabled={status === "submitting"}
+            className="h-12 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-semibold px-6 shadow-sm"
+          >
             {status === "submitting" ? (
               <>
                 <Loader2 className="size-4 animate-spin" aria-hidden="true" />

@@ -73,26 +73,26 @@ function AdminPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="border-b border-border">
+    <div className="min-h-screen bg-[#F5F5F7] text-[#1D1D1F]">
+      <header className="border-b border-black/[0.06] bg-white">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-6">
           <div>
-            <h1 className="text-2xl font-semibold tracking-tight">Newsletter subscribers</h1>
-            <p className="text-sm text-muted-foreground">
+            <h1 className="text-2xl font-bold tracking-tight text-[#1D1D1F]">Newsletter subscribers</h1>
+            <p className="text-xs font-medium text-[#86868B]">
               {isLoading ? "Loading…" : `${subscribers.length} total`}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <Button variant="outline" size="sm" onClick={() => refetch()} disabled={isFetching}>
-              <RefreshCw className={`size-4 ${isFetching ? "animate-spin" : ""}`} aria-hidden />
+            <Button variant="outline" size="sm" className="rounded-full border-black/[0.1] bg-white text-[#1D1D1F]" onClick={() => refetch()} disabled={isFetching}>
+              <RefreshCw className={`size-4 mr-1 ${isFetching ? "animate-spin" : ""}`} aria-hidden />
               Refresh
             </Button>
-            <Button size="sm" onClick={handleExport} disabled={filtered.length === 0}>
-              <Download className="size-4" aria-hidden />
+            <Button size="sm" className="rounded-full bg-rose-600 hover:bg-rose-500 text-white font-medium shadow-sm" onClick={handleExport} disabled={filtered.length === 0}>
+              <Download className="size-4 mr-1" aria-hidden />
               Export CSV
             </Button>
-            <Button variant="ghost" size="sm" onClick={handleSignOut}>
-              <LogOut className="size-4" aria-hidden />
+            <Button variant="ghost" size="sm" className="rounded-full text-[#86868B] hover:text-[#1D1D1F]" onClick={handleSignOut}>
+              <LogOut className="size-4 mr-1" aria-hidden />
               Sign out
             </Button>
           </div>
@@ -101,9 +101,9 @@ function AdminPage() {
 
       <main className="mx-auto max-w-5xl px-6 py-8">
         {error ? (
-          <p className="text-sm text-destructive">Could not load subscribers. Try refreshing.</p>
+          <p className="text-sm text-destructive font-medium">Could not load subscribers. Try refreshing.</p>
         ) : data && !data.isAdmin ? (
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-[#86868B]">
             Your account doesn't have admin access yet. Ask an existing admin to grant it.
           </p>
         ) : (
@@ -112,36 +112,36 @@ function AdminPage() {
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search by email"
-              className="mb-6 max-w-xs"
+              className="mb-6 max-w-xs h-11 rounded-full border-black/[0.1] bg-white text-[#1D1D1F] px-4"
               aria-label="Search subscribers by email"
             />
 
-            <div className="overflow-x-auto rounded-lg border border-border">
+            <div className="overflow-x-auto rounded-2xl border border-black/[0.06] bg-white shadow-card">
               <table className="w-full text-left text-sm">
-                <thead className="bg-card text-muted-foreground">
+                <thead className="bg-[#F5F5F7] text-[#1D1D1F] font-bold">
                   <tr>
-                    <th className="px-4 py-3 font-medium">Email</th>
-                    <th className="px-4 py-3 font-medium">Status</th>
-                    <th className="px-4 py-3 font-medium">Confirmation email</th>
-                    <th className="px-4 py-3 font-medium">Signed up</th>
+                    <th className="px-5 py-3.5">Email</th>
+                    <th className="px-5 py-3.5">Status</th>
+                    <th className="px-5 py-3.5">Confirmation email</th>
+                    <th className="px-5 py-3.5">Signed up</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="divide-y divide-black/[0.06]">
                   {filtered.map((row) => (
-                    <tr key={row.id} className="border-t border-border">
-                      <td className="px-4 py-3">{row.email}</td>
-                      <td className="px-4 py-3 text-muted-foreground">{row.status}</td>
-                      <td className="px-4 py-3 text-muted-foreground">
+                    <tr key={row.id} className="hover:bg-[#F5F5F7]/50 transition-colors">
+                      <td className="px-5 py-3.5 font-medium text-[#1D1D1F]">{row.email}</td>
+                      <td className="px-5 py-3.5 text-[#86868B]">{row.status}</td>
+                      <td className="px-5 py-3.5 text-[#86868B]">
                         {row.confirmation_email_status}
                       </td>
-                      <td className="px-4 py-3 text-muted-foreground">
+                      <td className="px-5 py-3.5 text-[#86868B]">
                         {new Date(row.created_at).toLocaleString()}
                       </td>
                     </tr>
                   ))}
                   {!isLoading && filtered.length === 0 ? (
                     <tr>
-                      <td colSpan={4} className="px-4 py-8 text-center text-muted-foreground">
+                      <td colSpan={4} className="px-5 py-8 text-center text-[#86868B]">
                         No subscribers yet.
                       </td>
                     </tr>

@@ -53,61 +53,56 @@ const pillars = [
 
 export function Pillars() {
   return (
-    <section id="pillars" className="border-t border-border py-24 bg-card/20">
+    <section id="pillars" className="border-t border-black/[0.06] py-24 bg-[#F5F5F7]">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="text-center max-w-3xl mx-auto">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/80 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
+        <div className="reveal text-center max-w-3xl mx-auto">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-black/[0.06] bg-white px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-rose-600 shadow-sm">
             <Sparkles className="size-3.5" aria-hidden="true" />
             Core Capabilities
           </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#1D1D1F] sm:text-5xl">
             Four Pillars of Resilience
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground">
+          <p className="mt-4 text-base sm:text-lg text-[#86868B]">
             Engineered from the ground up for peace of mind, mutual aid, and continuous learning — online or completely off the grid.
           </p>
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
-          {pillars.map((pillar) => {
+          {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
             return (
               <div
                 key={pillar.id}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card p-8 sm:p-10 shadow-card transition-all duration-300 hover:border-primary/50 hover:shadow-glow"
+                className={`reveal delay-${idx + 1} group relative flex flex-col justify-between overflow-hidden rounded-[28px] border border-black/[0.06] bg-white p-8 sm:p-10 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
               >
-                {/* Subtle gradient background on hover */}
-                <div
-                  className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${pillar.accentColor} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
-                />
-
                 <div className="relative z-10">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-secondary shadow-sm">
-                      <Icon className={`size-6 ${pillar.iconColor}`} aria-hidden="true" />
+                    <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#F5F5F7] shadow-sm">
+                      <Icon className="size-6 text-rose-600" aria-hidden="true" />
                     </span>
-                    <span className="rounded-full bg-secondary/90 px-3 py-1 text-xs font-medium text-muted-foreground">
+                    <span className="rounded-full bg-[#F5F5F7] px-3 py-1 text-xs font-medium text-[#86868B]">
                       {pillar.badge}
                     </span>
                   </div>
 
-                  <h3 className="mt-6 text-2xl font-bold tracking-tight text-foreground">
+                  <h3 className="mt-6 text-2xl font-bold tracking-tight text-[#1D1D1F]">
                     {pillar.title}
                   </h3>
-                  <p className="mt-1.5 text-sm font-semibold text-accent">
+                  <p className="mt-1.5 text-sm font-semibold text-rose-600">
                     {pillar.subtitle}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-4 text-sm leading-relaxed text-[#86868B]">
                     {pillar.description}
                   </p>
                 </div>
 
-                <div className="relative z-10 mt-8 pt-6 border-t border-border/60">
+                <div className="relative z-10 mt-8 pt-6 border-t border-black/[0.06]">
                   <div className="flex flex-wrap gap-2">
                     {pillar.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center rounded-lg border border-border/80 bg-background/60 px-2.5 py-1 text-xs font-medium text-muted-foreground transition-colors group-hover:text-foreground group-hover:border-border"
+                        className="inline-flex items-center rounded-lg border border-black/[0.05] bg-[#F5F5F7] px-2.5 py-1 text-xs font-medium text-[#1D1D1F] transition-colors group-hover:bg-rose-50 group-hover:text-rose-700"
                       >
                         {tag}
                       </span>

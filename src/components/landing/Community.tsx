@@ -27,29 +27,34 @@ const quotes = [
 
 export function Community() {
   return (
-    <section id="community" className="border-t border-border py-24">
+    <section id="community" className="border-t border-black/[0.06] py-24 bg-white">
       <div className="mx-auto max-w-6xl px-6">
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          What the community says
-        </h2>
-        <p className="mt-3 text-muted-foreground">Builders and users from around the world.</p>
+        <div className="reveal max-w-2xl">
+          <p className="text-sm font-semibold text-rose-600 uppercase tracking-wider">Voices of Resilience</p>
+          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#1D1D1F] sm:text-4xl">
+            What the community says
+          </h2>
+          <p className="mt-3 text-[#86868B] text-base sm:text-lg">
+            Empowering organizers, educators, homesteaders, and radio operators worldwide.
+          </p>
+        </div>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
-          {quotes.map((item) => (
+          {quotes.map((item, idx) => (
             <figure
               key={item.name}
-              className="rounded-2xl border border-border bg-card p-8 shadow-card"
+              className={`reveal delay-${idx + 1} flex flex-col justify-between rounded-[24px] border border-black/[0.06] bg-[#F5F5F7] p-8 shadow-card transition-all duration-300 hover:bg-white hover:shadow-xl hover:-translate-y-1`}
             >
-              <blockquote className="text-base leading-relaxed">
+              <blockquote className="text-base leading-relaxed text-[#1D1D1F]">
                 &ldquo;{item.quote}&rdquo;
               </blockquote>
-              <figcaption className="mt-6 flex items-center gap-3">
-                <span className="inline-flex size-9 items-center justify-center rounded-full bg-secondary text-sm font-semibold text-accent">
+              <figcaption className="mt-6 flex items-center gap-3 pt-4 border-t border-black/[0.05]">
+                <span className="inline-flex size-9 items-center justify-center rounded-full bg-white text-sm font-bold text-rose-600 shadow-sm border border-black/[0.04]">
                   {item.name.charAt(0)}
                 </span>
                 <span className="text-sm">
-                  <span className="block font-medium">{item.name}</span>
-                  <span className="block text-muted-foreground">{item.role}</span>
+                  <span className="block font-bold text-[#1D1D1F]">{item.name}</span>
+                  <span className="block text-xs text-[#86868B]">{item.role}</span>
                 </span>
               </figcaption>
             </figure>

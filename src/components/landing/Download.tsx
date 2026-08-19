@@ -38,26 +38,26 @@ const faqs = [
 
 export function Download() {
   return (
-    <section id="download" className="border-t border-border py-24">
+    <section id="download" className="border-t border-black/[0.06] py-24 bg-[#F5F5F7]">
       <div className="mx-auto max-w-5xl px-6">
         {/* Main CTA banner */}
-        <div className="rounded-3xl border border-border bg-gradient-to-b from-card to-background p-10 sm:p-16 text-center shadow-card">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
+        <div className="reveal rounded-[32px] border border-black/[0.06] bg-white p-10 sm:p-16 text-center shadow-card">
+          <span className="inline-flex items-center gap-2 rounded-full border border-black/[0.06] bg-[#F5F5F7] px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-rose-600 shadow-sm">
             <Sparkles className="size-3.5" aria-hidden="true" />
             100% Free & Open Source
           </span>
 
-          <h2 className="mt-6 text-3xl font-extrabold tracking-tight sm:text-5xl">
+          <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-[#1D1D1F] sm:text-5xl">
             Keep the orchard of human knowledge and community alive.
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-[#86868B]">
             Carry resilient communications, massive offline libraries, and neighborhood mutual-aid in your pocket.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Button
               size="lg"
-              className="h-13 px-8 rounded-2xl bg-rose-600 hover:bg-rose-500 text-white font-semibold text-base shadow-lg shadow-rose-950/60 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="h-13 px-8 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-semibold text-base shadow-lg shadow-rose-950/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
               asChild
             >
               <a href={STORE_LINKS.ios} target="_blank" rel="noopener noreferrer">
@@ -68,7 +68,7 @@ export function Download() {
             <Button
               size="lg"
               variant="secondary"
-              className="h-13 px-7 rounded-2xl font-semibold text-base"
+              className="h-13 px-7 rounded-full bg-[#E8E8ED] hover:bg-[#DFDFE4] text-[#1D1D1F] font-semibold text-base"
               asChild
             >
               <a href={STORE_LINKS.macos} target="_blank" rel="noopener noreferrer">
@@ -79,7 +79,7 @@ export function Download() {
             <Button
               size="lg"
               variant="outline"
-              className="h-13 px-7 rounded-2xl font-semibold text-base"
+              className="h-13 px-7 rounded-full border border-black/[0.12] bg-white hover:bg-black/[0.03] text-[#1D1D1F] font-semibold text-base"
               asChild
             >
               <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer">
@@ -90,7 +90,7 @@ export function Download() {
             <Button
               size="lg"
               variant="outline"
-              className="h-13 px-7 rounded-2xl font-semibold text-base"
+              className="h-13 px-7 rounded-full border border-black/[0.12] bg-white hover:bg-black/[0.03] text-[#1D1D1F] font-semibold text-base"
               asChild
             >
               <a href={STORE_LINKS.fediverse} target="_blank" rel="noopener noreferrer">
@@ -102,12 +102,12 @@ export function Download() {
         </div>
 
         {/* Integrated FAQ */}
-        <div className="mt-24 max-w-3xl mx-auto">
+        <div className="reveal delay-2 mt-24 max-w-3xl mx-auto">
           <div className="text-center">
-            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            <h3 className="text-2xl font-extrabold tracking-tight text-[#1D1D1F] sm:text-3xl">
               Frequently Asked Questions
             </h3>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <p className="mt-2 text-sm text-[#86868B]">
               Everything you need to know about Orchard's offline architecture and mesh network.
             </p>
           </div>
@@ -118,12 +118,12 @@ export function Download() {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="rounded-2xl border border-border bg-card px-6 py-1.5 shadow-card"
+                  className="rounded-2xl border border-black/[0.06] bg-white px-6 py-1.5 shadow-card"
                 >
-                  <AccordionTrigger className="text-base font-semibold hover:no-underline text-left">
+                  <AccordionTrigger className="text-base font-bold text-[#1D1D1F] hover:no-underline text-left">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                  <AccordionContent className="text-sm leading-relaxed text-[#86868B]">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -138,34 +138,34 @@ export function Download() {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border py-12 bg-background">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 text-sm text-muted-foreground sm:flex-row">
+    <footer className="border-t border-black/[0.06] py-12 bg-white">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 text-sm text-[#86868B] sm:flex-row">
         <div>
-          <p className="font-medium text-foreground">Orchard Super-App</p>
-          <p className="text-xs text-muted-foreground mt-1">
+          <p className="font-bold text-[#1D1D1F]">Orchard Super-App</p>
+          <p className="text-xs text-[#86868B] mt-1">
             © {new Date().getFullYear()} Orchard Project. Free & Open Source Software (FOSS).
           </p>
         </div>
-        <nav className="flex flex-wrap gap-6 text-xs sm:text-sm">
-          <a href="/#pillars" className="transition-colors hover:text-foreground">
+        <nav className="flex flex-wrap gap-6 text-xs sm:text-sm font-medium">
+          <a href="/#pillars" className="transition-colors hover:text-[#1D1D1F]">
             Pillars
           </a>
-          <a href="/#features" className="transition-colors hover:text-foreground">
+          <a href="/#features" className="transition-colors hover:text-[#1D1D1F]">
             Capabilities
           </a>
-          <a href="/#how" className="transition-colors hover:text-foreground">
+          <a href="/#how" className="transition-colors hover:text-[#1D1D1F]">
             How it works
           </a>
-          <a href="/#specs" className="transition-colors hover:text-foreground">
+          <a href="/#specs" className="transition-colors hover:text-[#1D1D1F]">
             Tech Specs
           </a>
-          <a href="/pricing" className="transition-colors hover:text-foreground">
+          <a href="/pricing" className="transition-colors hover:text-[#1D1D1F]">
             Open Source
           </a>
-          <a href="/blog" className="transition-colors hover:text-foreground">
+          <a href="/blog" className="transition-colors hover:text-[#1D1D1F]">
             Blog
           </a>
-          <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
+          <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#1D1D1F]">
             GitHub
           </a>
         </nav>

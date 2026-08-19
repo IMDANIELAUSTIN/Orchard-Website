@@ -13,25 +13,25 @@ const links = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2.5 font-semibold tracking-tight text-foreground">
-          <span className="inline-flex size-9 items-center justify-center rounded-xl bg-brand text-primary-foreground shadow-sm">
-            <Trees className="size-5" aria-hidden="true" />
+    <header className="sticky top-0 z-50 border-b border-black/[0.06] bg-white/75 backdrop-blur-2xl [backdrop-filter:saturate(180%)_blur(20px)] [-webkit-backdrop-filter:saturate(180%)_blur(20px)] transition-all">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
+        <Link to="/" className="flex items-center gap-2.5 font-semibold tracking-tight text-[#1D1D1F]">
+          <span className="inline-flex size-8 items-center justify-center rounded-xl bg-rose-600 text-white shadow-sm">
+            <Trees className="size-4.5" aria-hidden="true" />
           </span>
-          <span className="text-lg font-bold tracking-tight">Orchard</span>
+          <span className="text-base font-bold tracking-tight">Orchard</span>
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm text-muted-foreground lg:flex">
+        <nav className="hidden items-center gap-7 text-xs font-medium text-[#86868B] lg:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="transition-colors hover:text-foreground">
+            <a key={link.href} href={link.href} className="transition-colors hover:text-[#1D1D1F]">
               {link.label}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button asChild size="sm" className="hidden sm:inline-flex bg-rose-600 hover:bg-rose-500 text-white font-medium rounded-xl shadow-sm">
+          <Button asChild size="sm" className="hidden sm:inline-flex bg-rose-600 hover:bg-rose-500 text-white font-medium rounded-full shadow-sm text-xs h-8 px-3.5">
             <a href="/#download">
               <Download className="mr-1.5 size-3.5" aria-hidden="true" />
               Get Orchard
