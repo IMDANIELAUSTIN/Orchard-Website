@@ -53,17 +53,17 @@ const pillars = [
 
 export function Pillars() {
   return (
-    <section id="pillars" className="border-t border-black/[0.06] py-24 bg-[#F5F5F7]">
+    <section id="pillars" className="border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-24 bg-[#EAE5E2] dark:bg-[#1E0700]">
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal text-center max-w-3xl mx-auto">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-black/[0.06] bg-white px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-rose-600 shadow-sm">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#290B00] dark:text-[#F6F4F3] shadow-sm">
             <Sparkles className="size-3.5" aria-hidden="true" />
             Core Capabilities
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#1D1D1F] sm:text-5xl">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3] sm:text-5xl">
             Four Pillars of Resilience
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#86868B]">
+          <p className="mt-4 text-base sm:text-lg text-[#290B00]/70 dark:text-[#F6F4F3]/70">
             Engineered from the ground up for peace of mind, mutual aid, and continuous learning — online or completely off the grid.
           </p>
         </div>
@@ -74,35 +74,35 @@ export function Pillars() {
             return (
               <div
                 key={pillar.id}
-                className={`reveal delay-${idx + 1} group relative flex flex-col justify-between overflow-hidden rounded-[28px] border border-black/[0.06] bg-white p-8 sm:p-10 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
+                className={`reveal delay-${idx + 1} group relative flex flex-col justify-between overflow-hidden rounded-[28px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-10 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
               >
                 <div className="relative z-10">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#F5F5F7] shadow-sm">
-                      <Icon className="size-6 text-rose-600" aria-hidden="true" />
+                    <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#EAE5E2] dark:bg-[#481C0C] shadow-sm">
+                      <Icon className="size-6 text-[#290B00] dark:text-[#F6F4F3]" aria-hidden="true" />
                     </span>
-                    <span className="rounded-full bg-[#F5F5F7] px-3 py-1 text-xs font-medium text-[#86868B]">
+                    <span className="rounded-full bg-[#EAE5E2] dark:bg-[#481C0C] px-3 py-1 text-xs font-medium text-[#290B00]/70 dark:text-[#F6F4F3]/70">
                       {pillar.badge}
                     </span>
                   </div>
 
-                  <h3 className="mt-6 text-2xl font-bold tracking-tight text-[#1D1D1F]">
+                  <h3 className="mt-6 text-2xl font-bold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">
                     {pillar.title}
                   </h3>
-                  <p className="mt-1.5 text-sm font-semibold text-rose-600">
+                  <p className="mt-1.5 text-sm font-semibold text-[#290B00] dark:text-[#F6F4F3]">
                     {pillar.subtitle}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-[#86868B]">
+                  <p className="mt-4 text-sm leading-relaxed text-[#290B00]/70 dark:text-[#F6F4F3]/70">
                     {pillar.description}
                   </p>
                 </div>
 
-                <div className="relative z-10 mt-8 pt-6 border-t border-black/[0.06]">
+                <div className="relative z-10 mt-8 pt-6 border-t border-[#290B00]/10 dark:border-[#F6F4F3]/15">
                   <div className="flex flex-wrap gap-2">
                     {pillar.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center rounded-lg border border-black/[0.05] bg-[#F5F5F7] px-2.5 py-1 text-xs font-medium text-[#1D1D1F] transition-colors group-hover:bg-rose-50 group-hover:text-rose-700"
+                        className="inline-flex items-center rounded-lg border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] px-2.5 py-1 text-xs font-medium text-[#290B00] dark:text-[#F6F4F3] transition-colors group-hover:bg-[#290B00] group-hover:text-[#F6F4F3] dark:group-hover:bg-[#F6F4F3] dark:group-hover:text-[#290B00]"
                       >
                         {tag}
                       </span>

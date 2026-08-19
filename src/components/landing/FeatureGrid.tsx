@@ -54,14 +54,14 @@ const capabilities = [
 
 export function FeatureGrid() {
   return (
-    <section id="features" className="border-t border-black/[0.06] py-24 bg-white">
+    <section id="features" className="border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-24 bg-[#F6F4F3] dark:bg-[#290B00]">
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal max-w-2xl">
-          <p className="text-sm font-semibold text-rose-600 uppercase tracking-wider">Designed for Real Life</p>
-          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#1D1D1F] sm:text-4xl">
+          <p className="text-sm font-semibold text-[#290B00] dark:text-[#F6F4F3] uppercase tracking-wider">Designed for Real Life</p>
+          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3] sm:text-4xl">
             Everything you need when it matters most
           </h2>
-          <p className="mt-3 text-[#86868B] text-base sm:text-lg leading-relaxed">
+          <p className="mt-3 text-[#290B00]/70 dark:text-[#F6F4F3]/70 text-base sm:text-lg leading-relaxed">
             Built from the ground up for peace of mind, off-grid freedom, and effortless community connection.
           </p>
         </div>
@@ -70,14 +70,14 @@ export function FeatureGrid() {
           {capabilities.map(({ icon: Icon, title, body }, idx) => (
             <article
               key={title}
-              className={`reveal delay-${(idx % 4) + 1} group flex flex-col justify-between rounded-[24px] border border-black/[0.06] bg-[#F5F5F7] p-6 sm:p-7 shadow-card transition-all duration-300 hover:bg-white hover:shadow-xl hover:-translate-y-1`}
+              className={`reveal delay-${(idx % 4) + 1} group flex flex-col justify-between rounded-[24px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#381406] p-6 sm:p-7 shadow-card transition-all duration-300 hover:bg-[#F6F4F3] dark:hover:bg-[#481C0C] hover:shadow-xl hover:-translate-y-1`}
             >
               <div>
-                <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-white text-rose-600 shadow-sm transition-transform group-hover:scale-110">
+                <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-[#F6F4F3] dark:bg-[#290B00] text-[#290B00] dark:text-[#F6F4F3] shadow-sm border border-[#290B00]/10 dark:border-[#F6F4F3]/15 transition-transform group-hover:scale-110">
                   <Icon className="size-5" aria-hidden="true" />
                 </span>
-                <h3 className="mt-5 text-base font-bold text-[#1D1D1F]">{title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#86868B]">{body}</p>
+                <h3 className="mt-5 text-base font-bold text-[#290B00] dark:text-[#F6F4F3]">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#290B00]/70 dark:text-[#F6F4F3]/70">{body}</p>
               </div>
             </article>
           ))}

@@ -49,16 +49,16 @@ const techSpecs = [
 
 export function Showcase() {
   return (
-    <section id="how" className="border-t border-black/[0.06] py-24 bg-[#F5F5F7]">
+    <section id="how" className="border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-24 bg-[#EAE5E2] dark:bg-[#1E0700]">
       <div className="mx-auto max-w-6xl px-6">
         {/* Step-by-step section */}
         <div>
           <div className="reveal max-w-2xl">
-            <p className="text-sm font-semibold text-rose-600 uppercase tracking-wider">How It Works</p>
-            <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#1D1D1F] sm:text-4xl">
+            <p className="text-sm font-semibold text-[#290B00] dark:text-[#F6F4F3] uppercase tracking-wider">How It Works</p>
+            <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3] sm:text-4xl">
               From high-speed fiber to completely off-grid
             </h2>
-            <p className="mt-3 text-[#86868B] text-base sm:text-lg leading-relaxed">
+            <p className="mt-3 text-[#290B00]/70 dark:text-[#F6F4F3]/70 text-base sm:text-lg leading-relaxed">
               A resilient, adaptive topology that gracefully degrades as network infrastructure disconnects.
             </p>
           </div>
@@ -69,25 +69,25 @@ export function Showcase() {
               return (
                 <div
                   key={block.title}
-                  className={`reveal delay-${idx + 1} relative flex flex-col justify-between rounded-[28px] border border-black/[0.06] bg-white p-8 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
+                  className={`reveal delay-${idx + 1} relative flex flex-col justify-between rounded-[28px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-rose-50 text-rose-600 font-bold text-sm">
+                      <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-[#EAE5E2] dark:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] font-bold text-sm">
                         {block.step}
                       </span>
-                      <Icon className="size-5 text-[#86868B]" aria-hidden="true" />
+                      <Icon className="size-5 text-[#290B00]/60 dark:text-[#F6F4F3]/60" aria-hidden="true" />
                     </div>
 
-                    <h3 className="mt-6 text-xl font-bold text-[#1D1D1F]">{block.title}</h3>
-                    <p className="mt-2 text-sm text-[#86868B] leading-relaxed">{block.lead}</p>
+                    <h3 className="mt-6 text-xl font-bold text-[#290B00] dark:text-[#F6F4F3]">{block.title}</h3>
+                    <p className="mt-2 text-sm text-[#290B00]/70 dark:text-[#F6F4F3]/70 leading-relaxed">{block.lead}</p>
                   </div>
 
-                  <ul className="mt-6 space-y-3 border-t border-black/[0.06] pt-6">
+                  <ul className="mt-6 space-y-3 border-t border-[#290B00]/10 dark:border-[#F6F4F3]/15 pt-6">
                     {block.points.map((point) => (
                       <li key={point} className="flex gap-2.5 text-sm">
-                        <Check className="mt-0.5 size-4 shrink-0 text-rose-600" aria-hidden="true" />
-                        <span className="text-[#86868B]">{point}</span>
+                        <Check className="mt-0.5 size-4 shrink-0 text-[#290B00] dark:text-[#F6F4F3]" aria-hidden="true" />
+                        <span className="text-[#290B00]/70 dark:text-[#F6F4F3]/70">{point}</span>
                       </li>
                     ))}
                   </ul>
@@ -98,31 +98,31 @@ export function Showcase() {
         </div>
 
         {/* Technical Specs & Integrity Box */}
-        <div id="specs" className="reveal delay-2 mt-24 rounded-[32px] border border-black/[0.06] bg-white p-8 sm:p-12 shadow-card">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pb-8 border-b border-black/[0.06]">
+        <div id="specs" className="reveal delay-2 mt-24 rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-12 shadow-card">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pb-8 border-b border-[#290B00]/10 dark:border-[#F6F4F3]/15">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-semibold text-rose-600 uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#290B00] dark:text-[#F6F4F3] uppercase tracking-wider">
                 <Code2 className="size-4" aria-hidden="true" />
                 Technical Specs & Integrity
               </div>
-              <h3 className="mt-2 text-2xl font-bold sm:text-3xl text-[#1D1D1F]">
+              <h3 className="mt-2 text-2xl font-bold sm:text-3xl text-[#290B00] dark:text-[#F6F4F3]">
                 Built natively for Apple silicon and open standards
               </h3>
-              <p className="mt-2 text-sm text-[#86868B] max-w-2xl leading-relaxed">
+              <p className="mt-2 text-sm text-[#290B00]/70 dark:text-[#F6F4F3]/70 max-w-2xl leading-relaxed">
                 No web wrappers or Electron bloat. Orchard is written in native Swift 6 for unmatched memory efficiency, battery life, and instantaneous offline responsiveness.
               </p>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#F5F5F7] px-4 py-2 text-xs font-semibold text-[#1D1D1F] border border-black/[0.06]">
-              <ShieldCheck className="size-4 text-rose-600" aria-hidden="true" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#EAE5E2] dark:bg-[#481C0C] px-4 py-2 text-xs font-semibold text-[#290B00] dark:text-[#F6F4F3] border border-[#290B00]/10 dark:border-[#F6F4F3]/15">
+              <ShieldCheck className="size-4 text-[#290B00] dark:text-[#F6F4F3]" aria-hidden="true" />
               100% Free & Open Source (FOSS)
             </div>
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {techSpecs.map((spec) => (
-              <div key={spec.label} className="rounded-2xl border border-black/[0.05] bg-[#F5F5F7] p-4 transition-colors hover:bg-rose-50/50">
-                <div className="text-xs font-medium text-[#86868B]">{spec.label}</div>
-                <div className="mt-1.5 text-sm font-semibold text-[#1D1D1F]">{spec.value}</div>
+              <div key={spec.label} className="rounded-2xl border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] p-4 transition-colors hover:bg-[#E2DAD6] dark:hover:bg-[#56220E]">
+                <div className="text-xs font-medium text-[#290B00]/60 dark:text-[#F6F4F3]/60">{spec.label}</div>
+                <div className="mt-1.5 text-sm font-semibold text-[#290B00] dark:text-[#F6F4F3]">{spec.value}</div>
               </div>
             ))}
           </div>

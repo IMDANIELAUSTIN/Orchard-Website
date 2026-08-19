@@ -35,20 +35,20 @@ export const Route = createFileRoute("/blog/")({
 
 function BlogIndex() {
   return (
-    <div className="min-h-screen bg-[#F5F5F7] text-[#1D1D1F]">
+    <div className="min-h-screen bg-[#F6F4F3] dark:bg-[#290B00] text-[#290B00] dark:text-[#F6F4F3]">
       <SiteHeader />
       <main className="mx-auto max-w-4xl px-6 py-20">
-        <div className="reveal flex flex-wrap items-end justify-between gap-6 pb-10 border-b border-black/[0.06]">
+        <div className="reveal flex flex-wrap items-end justify-between gap-6 pb-10 border-b border-[#290B00]/10 dark:border-[#F6F4F3]/10">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-rose-600">Dispatches & Articles</span>
-            <h1 className="mt-2 text-4xl font-extrabold tracking-tight text-[#1D1D1F]">Blog & Field Notes</h1>
-            <p className="mt-3 max-w-xl text-[#86868B] text-base leading-relaxed">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#290B00] dark:text-[#F6F4F3]">Dispatches & Articles</span>
+            <h1 className="mt-2 text-4xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">Blog & Field Notes</h1>
+            <p className="mt-3 max-w-xl text-[#290B00]/70 dark:text-[#F6F4F3]/70 text-base leading-relaxed">
               Notes on offline-first software, packet radio meshes, local food resilience, and open knowledge hubs.
             </p>
           </div>
-          <Button variant="outline" className="rounded-full border-black/[0.1] bg-white text-[#1D1D1F] hover:bg-black/[0.03]" asChild>
+          <Button variant="outline" className="rounded-full border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] text-[#290B00] dark:text-[#F6F4F3] hover:bg-[#EAE5E2] dark:hover:bg-[#481C0C]" asChild>
             <a href="/rss.xml">
-              <Rss className="size-4 mr-1.5 text-rose-600" aria-hidden="true" />
+              <Rss className="size-4 mr-1.5 text-[#290B00] dark:text-[#F6F4F3]" aria-hidden="true" />
               Subscribe via RSS
             </a>
           </Button>
@@ -56,14 +56,14 @@ function BlogIndex() {
 
         <ul className="mt-10 space-y-6">
           {sortedPosts.map((post, idx) => (
-            <li key={post.slug} className={`reveal delay-${idx + 1} rounded-[24px] border border-black/[0.06] bg-white p-8 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}>
-              <h2 className="text-2xl font-bold tracking-tight text-[#1D1D1F]">
-                <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:text-rose-600 transition-colors">
+            <li key={post.slug} className={`reveal delay-${idx + 1} rounded-[24px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}>
+              <h2 className="text-2xl font-bold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">
+                <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:text-[#5C230C] dark:hover:text-[#DFCFC9] transition-colors">
                   {post.title}
                 </Link>
               </h2>
-              <p className="mt-3 text-base text-[#86868B] leading-relaxed">{post.excerpt}</p>
-              <p className="mt-6 pt-4 border-t border-black/[0.04] text-xs text-[#86868B]">
+              <p className="mt-3 text-base text-[#290B00]/70 dark:text-[#F6F4F3]/70 leading-relaxed">{post.excerpt}</p>
+              <p className="mt-6 pt-4 border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 text-xs text-[#290B00]/60 dark:text-[#F6F4F3]/60">
                 {post.author} · <time dateTime={post.date}>{formatDate(post.date)}</time> ·{" "}
                 {post.readingTime}
               </p>

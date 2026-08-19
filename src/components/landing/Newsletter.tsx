@@ -106,10 +106,10 @@ export function Newsletter() {
   const isInvalid = status === "error";
 
   return (
-    <section id="newsletter" className="border-t border-black/[0.06] py-24 bg-white">
+    <section id="newsletter" className="border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-24 bg-[#F6F4F3] dark:bg-[#290B00]">
       <div className="reveal mx-auto max-w-3xl px-6 text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight text-[#1D1D1F] sm:text-4xl">Stay in the loop</h2>
-        <p className="mx-auto mt-3 max-w-lg text-[#86868B] text-base leading-relaxed">
+        <h2 className="text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3] sm:text-4xl">Stay in the loop</h2>
+        <p className="mx-auto mt-3 max-w-lg text-[#290B00]/70 dark:text-[#F6F4F3]/70 text-base leading-relaxed">
           Occasional updates on new releases, mesh radio blueprints, and offline educational archives. Zero spam, unsubscribe anytime.
         </p>
 
@@ -138,7 +138,7 @@ export function Newsletter() {
                 setMessage("");
               }
             }}
-            className="h-12 flex-1 rounded-full border-black/[0.1] bg-[#F5F5F7] px-5 text-[#1D1D1F] placeholder:text-[#86868B] focus:bg-white"
+            className="h-12 flex-1 rounded-full border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#381406] px-5 text-[#290B00] dark:text-[#F6F4F3] placeholder:text-[#290B00]/50 dark:placeholder:text-[#F6F4F3]/50 focus:bg-[#F6F4F3] dark:focus:bg-[#481C0C]"
           />
           {/* Honeypot field — hidden from real users, catches simple bots. */}
           <input
@@ -155,7 +155,7 @@ export function Newsletter() {
             type="submit"
             size="lg"
             disabled={status === "submitting"}
-            className="h-12 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-semibold px-6 shadow-sm"
+            className="h-12 rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-semibold px-6 shadow-sm border border-transparent dark:border-[#F6F4F3]/20"
           >
             {status === "submitting" ? (
               <>

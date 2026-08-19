@@ -73,25 +73,25 @@ function AdminPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F5F7] text-[#1D1D1F]">
-      <header className="border-b border-black/[0.06] bg-white">
+    <div className="min-h-screen bg-[#F6F4F3] dark:bg-[#290B00] text-[#290B00] dark:text-[#F6F4F3]">
+      <header className="border-b border-[#290B00]/10 dark:border-[#F6F4F3]/10 bg-[#F6F4F3] dark:bg-[#381406]">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-6">
           <div>
-            <h1 className="text-2xl font-bold tracking-tight text-[#1D1D1F]">Newsletter subscribers</h1>
-            <p className="text-xs font-medium text-[#86868B]">
+            <h1 className="text-2xl font-bold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">Newsletter subscribers</h1>
+            <p className="text-xs font-medium text-[#290B00]/60 dark:text-[#F6F4F3]/60">
               {isLoading ? "Loading…" : `${subscribers.length} total`}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <Button variant="outline" size="sm" className="rounded-full border-black/[0.1] bg-white text-[#1D1D1F]" onClick={() => refetch()} disabled={isFetching}>
+            <Button variant="outline" size="sm" className="rounded-full border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] text-[#290B00] dark:text-[#F6F4F3] hover:bg-[#EAE5E2] dark:hover:bg-[#481C0C]" onClick={() => refetch()} disabled={isFetching}>
               <RefreshCw className={`size-4 mr-1 ${isFetching ? "animate-spin" : ""}`} aria-hidden />
               Refresh
             </Button>
-            <Button size="sm" className="rounded-full bg-rose-600 hover:bg-rose-500 text-white font-medium shadow-sm" onClick={handleExport} disabled={filtered.length === 0}>
+            <Button size="sm" className="rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-medium shadow-sm border border-transparent dark:border-[#F6F4F3]/20" onClick={handleExport} disabled={filtered.length === 0}>
               <Download className="size-4 mr-1" aria-hidden />
               Export CSV
             </Button>
-            <Button variant="ghost" size="sm" className="rounded-full text-[#86868B] hover:text-[#1D1D1F]" onClick={handleSignOut}>
+            <Button variant="ghost" size="sm" className="rounded-full text-[#290B00]/70 dark:text-[#F6F4F3]/70 hover:text-[#290B00] dark:hover:text-[#F6F4F3]" onClick={handleSignOut}>
               <LogOut className="size-4 mr-1" aria-hidden />
               Sign out
             </Button>
@@ -103,7 +103,7 @@ function AdminPage() {
         {error ? (
           <p className="text-sm text-destructive font-medium">Could not load subscribers. Try refreshing.</p>
         ) : data && !data.isAdmin ? (
-          <p className="text-sm text-[#86868B]">
+          <p className="text-sm text-[#290B00]/70 dark:text-[#F6F4F3]/70">
             Your account doesn't have admin access yet. Ask an existing admin to grant it.
           </p>
         ) : (
@@ -112,13 +112,13 @@ function AdminPage() {
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search by email"
-              className="mb-6 max-w-xs h-11 rounded-full border-black/[0.1] bg-white text-[#1D1D1F] px-4"
+              className="mb-6 max-w-xs h-11 rounded-full border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] text-[#290B00] dark:text-[#F6F4F3] px-4"
               aria-label="Search subscribers by email"
             />
 
-            <div className="overflow-x-auto rounded-2xl border border-black/[0.06] bg-white shadow-card">
+            <div className="overflow-x-auto rounded-2xl border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] shadow-card">
               <table className="w-full text-left text-sm">
-                <thead className="bg-[#F5F5F7] text-[#1D1D1F] font-bold">
+                <thead className="bg-[#EAE5E2] dark:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] font-bold">
                   <tr>
                     <th className="px-5 py-3.5">Email</th>
                     <th className="px-5 py-3.5">Status</th>
@@ -126,22 +126,22 @@ function AdminPage() {
                     <th className="px-5 py-3.5">Signed up</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-black/[0.06]">
+                <tbody className="divide-y divide-[#290B00]/10 dark:divide-[#F6F4F3]/15">
                   {filtered.map((row) => (
-                    <tr key={row.id} className="hover:bg-[#F5F5F7]/50 transition-colors">
-                      <td className="px-5 py-3.5 font-medium text-[#1D1D1F]">{row.email}</td>
-                      <td className="px-5 py-3.5 text-[#86868B]">{row.status}</td>
-                      <td className="px-5 py-3.5 text-[#86868B]">
+                    <tr key={row.id} className="hover:bg-[#EAE5E2]/50 dark:hover:bg-[#481C0C]/50 transition-colors">
+                      <td className="px-5 py-3.5 font-medium text-[#290B00] dark:text-[#F6F4F3]">{row.email}</td>
+                      <td className="px-5 py-3.5 text-[#290B00]/70 dark:text-[#F6F4F3]/70">{row.status}</td>
+                      <td className="px-5 py-3.5 text-[#290B00]/70 dark:text-[#F6F4F3]/70">
                         {row.confirmation_email_status}
                       </td>
-                      <td className="px-5 py-3.5 text-[#86868B]">
+                      <td className="px-5 py-3.5 text-[#290B00]/70 dark:text-[#F6F4F3]/70">
                         {new Date(row.created_at).toLocaleString()}
                       </td>
                     </tr>
                   ))}
                   {!isLoading && filtered.length === 0 ? (
                     <tr>
-                      <td colSpan={4} className="px-5 py-8 text-center text-[#86868B]">
+                      <td colSpan={4} className="px-5 py-8 text-center text-[#290B00]/70 dark:text-[#F6F4F3]/70">
                         No subscribers yet.
                       </td>
                     </tr>
