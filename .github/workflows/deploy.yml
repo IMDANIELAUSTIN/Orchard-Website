@@ -27,17 +27,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20
-          cache: "npm"
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: Build project
-        run: npm run build
+        run: bun run build
 
       - name: Prepare static output for GitHub Pages
         run: |
@@ -51,7 +50,7 @@ jobs:
             exit 1
           fi
 
-          echo "Output directory is $OUT_DIR"
+          echo "Deploying from $OUT_DIR"
 
           # Disable Jekyll processing on GitHub Pages
           touch "$OUT_DIR/.nojekyll"
