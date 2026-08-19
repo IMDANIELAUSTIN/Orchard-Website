@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/landing/Download";
 import { Button } from "@/components/ui/button";
 import { sortedPosts, formatDate } from "@/lib/blog";
 
-const title = "Blog — Orchard Bitcoin Wallet";
+const title = "Blog & Field Notes — Orchard";
 const description =
-  "Practical writing on bitcoin self-custody, multisig vaults, fee strategy and Lightning payments from the Orchard team.";
+  "Practical dispatches on peer-to-peer mesh networks, offline super-libraries, mutual aid exchanges, and Fediverse protocols from the Orchard project.";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -40,10 +40,9 @@ function BlogIndex() {
       <main className="mx-auto max-w-4xl px-6 py-20">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <h1 className="text-4xl font-semibold tracking-tight">Blog</h1>
+            <h1 className="text-4xl font-semibold tracking-tight">Blog & Field Notes</h1>
             <p className="mt-3 max-w-xl text-muted-foreground">
-              Notes on custody, privacy, fees and Lightning — written by the people building
-              Orchard.
+              Dispatches on offline-first software, packet radio meshes, local food resilience, and open knowledge hubs.
             </p>
           </div>
           <Button variant="outline" asChild>

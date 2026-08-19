@@ -35,7 +35,7 @@ export const Route = createFileRoute("/rss.xml")({
           `  <channel>`,
           `    <title>Orchard Blog</title>`,
           `    <link>${SITE_URL}/blog</link>`,
-          `    <description>Notes on bitcoin self-custody, multisig, fees and Lightning from the Orchard team.</description>`,
+          `    <description>Notes on decentralized mesh networks, offline super-libraries, mutual aid, and Fediverse protocols from the Orchard team.</description>`,
           `    <language>en-us</language>`,
           `    <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />`,
           items,

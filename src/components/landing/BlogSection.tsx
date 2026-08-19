@@ -11,9 +11,9 @@ export function BlogSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="text-sm font-medium text-brand">From the blog</p>
+            <p className="text-sm font-medium text-brand uppercase tracking-wider">Field Notes & Dispatches</p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Notes on custody, privacy and fees
+              Notes on mesh networks, offline knowledge & mutual aid
             </h2>
           </div>
           <div className="flex gap-3">

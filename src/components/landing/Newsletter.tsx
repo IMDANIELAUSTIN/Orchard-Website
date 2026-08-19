@@ -110,8 +110,7 @@ export function Newsletter() {
       <div className="mx-auto max-w-3xl px-6 text-center">
         <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Stay in the loop</h2>
         <p className="mx-auto mt-3 max-w-lg text-muted-foreground">
-          Occasional updates on new releases, security notes and self-custody guides. No spam, and
-          you can unsubscribe any time.
+          Occasional updates on new releases, mesh radio blueprints, and offline educational archives. Zero spam, unsubscribe anytime.
         </p>
 
         <form

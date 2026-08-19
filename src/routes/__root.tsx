@@ -77,19 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Orchard — Simple, Powerful Bitcoin Wallet" },
+      { title: "Orchard — Resilient Knowledge, Mesh Network & Local Exchange" },
       {
         name: "description",
         content:
-          "Orchard is an open-source, self-custody bitcoin wallet with multisig vaults, fee control and Lightning payments.",
+          "Orchard is an open-source, off-grid-first multimedia knowledge hub, P2P mesh network, local resilience exchange, and open-educational super-app.",
       },
-      { name: "author", content: "Orchard Wallet" },
-      { property: "og:site_name", content: "Orchard Wallet" },
-      { property: "og:title", content: "Orchard — Simple, Powerful Bitcoin Wallet" },
+      { name: "author", content: "Orchard Project" },
+      { property: "og:site_name", content: "Orchard Project" },
+      { property: "og:title", content: "Orchard — Resilient Knowledge & Mesh Network for Everyone" },
       {
         property: "og:description",
         content:
-          "Open-source, self-custody bitcoin wallet with multisig vaults, fee control and Lightning payments.",
+          "Peer-to-peer mesh communications, massive offline educational libraries, local mutual-aid food markets, and decentralized social feeds.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

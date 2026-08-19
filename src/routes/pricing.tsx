@@ -3,10 +3,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Check,
   Apple,
-  Smartphone,
   Monitor,
+  Github,
   Sparkles,
-  Lock,
+  Heart,
+  Radio,
+  BookOpen,
+  Globe2,
+  ShieldCheck,
+  Cpu,
+  Layers,
+  Users2,
+  WifiOff,
 } from "lucide-react";
 import { SiteHeader } from "@/components/landing/SiteHeader";
 import { SiteFooter } from "@/components/landing/Download";
@@ -19,9 +27,9 @@ import {
 } from "@/components/ui/accordion";
 import { STORE_LINKS } from "@/lib/store-links";
 
-const title = "Pricing & Plans — Orchard Bitcoin Wallet";
+const title = "Open Source & Sponsorships — Orchard Project";
 const description =
-  "100% free and open-source self-custody bitcoin wallet. Explore standard features, power user supporter options, and institutional custody.";
+  "Orchard is 100% free and open source. Explore community sponsorship tiers, mesh hardware deployment guides, and our public goods commitment.";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -39,142 +47,129 @@ export const Route = createFileRoute("/pricing")({
   component: PricingPage,
 });
 
-const pricingTiers = [
+const tiers = [
   {
-    name: "Community",
+    name: "Individual & Community",
     badge: "100% Free & Open Source",
     priceMonthly: "$0",
     priceAnnual: "$0",
     period: "forever",
-    description: "The complete, uncompromising self-custody wallet for everyone.",
+    description: "The complete, uncompromised Orchard super-app across the Apple ecosystem.",
     featured: false,
     ctaLabel: "Download Orchard",
     ctaHref: "/#download",
     features: [
-      "Unlimited single-sig & 2-of-3 multisig vaults",
-      "Hardware signer PSBT integration (Ledger, Trezor, Coldcard, Jade, BitBox)",
-      "Instant Lightning Network payments & channel management",
-      "Dynamic fee control with RBF bump/cancel & CPFP acceleration",
-      "Granular coin control & UTXO labeling",
-      "Connect your own Bitcoin Core or Electrum node",
-      "Watch-only address & extended public key (xpub) tracking",
-      "Plausible deniability decoy vault support",
-      "Zero telemetry, zero tracking, zero accounts required",
-      "100% Free & Open Source under MIT license",
+      "Full Kiwix ZIM Super-Library (Wikipedia, MDWiki, Project Gutenberg)",
+      "P2P LoRa & Bluetooth Low Energy mesh chat (Signal Double Ratchet)",
+      "21-Category food, spring water & mutual-aid market directory",
+      "3D offline connection globe & passenger rail transit routing",
+      "Unified Fediverse stream (Mastodon, Bluesky, Lemmy, Nostr, RSS)",
+      "Lossless Spatial Audio player with live synced transcripts",
+      "Apple Watch (watchOS) emergency alerts & companion",
+      "Zero telemetry, zero accounts, zero tracking servers",
+      "Permissive Free & Open Source Software (FOSS) licensing",
     ],
   },
   {
-    name: "Supporter",
-    badge: "For Power Users",
-    priceMonthly: "$9",
-    priceAnnual: "$89",
-    period: "per user / billed annually",
-    description: "Cloud convenience, optimized routing, and funding open-source development.",
+    name: "Community Supporter",
+    badge: "Sustaining Open Source",
+    priceMonthly: "$5",
+    priceAnnual: "$50",
+    period: "per year voluntary sponsor",
+    description: "Support full-time open-source development, ZIM archive seeding, and research.",
     featured: true,
-    ctaLabel: "Become a Supporter",
-    ctaHref: "mailto:support@orchard-website.lovable.app?subject=Orchard%20Supporter%20Plan",
+    ctaLabel: "Sponsor on GitHub",
+    ctaHref: STORE_LINKS.github,
     features: [
-      "Everything in Community, plus:",
-      "End-to-end encrypted multi-device watch-only sync",
-      "High-speed zero-hop Lightning routing liquidity pool",
-      "Low-latency private push notification relay server",
-      "Automated seed & descriptor backup verification checker",
-      "Early beta access to new releases and experimental features",
-      "Priority bug triage and feature discussions on GitHub",
-      "Official Supporter badge & private developer forum access",
+      "Everything in Community (all features are always free for all users)",
+      "Directly sustain independent, open-source Swift 6 development",
+      "Supporter flair across community Lemmy and Mastodon forums",
+      "Early access to TestFlight beta builds and protocol experiments",
+      "Community roadmap voting on new course disciplines & tools",
+      "Fund public seeding of large Kiwix ZIM knowledge archives",
+      "Warm satisfaction of empowering off-grid human resilience",
     ],
   },
   {
-    name: "Enterprise",
-    badge: "Institutions & Family Offices",
-    priceMonthly: "Custom",
-    priceAnnual: "Custom",
-    period: "tailored contract",
-    description: "High-assurance custody workflows, custom policies, and dedicated engineering.",
+    name: "Resilience Hub & Deployments",
+    badge: "Schools, Homesteads & Mutual Aid",
+    priceMonthly: "Free",
+    priceAnnual: "Guides & Blueprints",
+    period: "open documentation",
+    description: "Hardware blueprints, school server caching setups, and local disaster readiness kits.",
     featured: false,
-    ctaLabel: "Contact Security Team",
-    ctaHref: "mailto:support@orchard-website.lovable.app?subject=Orchard%20Enterprise%20Inquiry",
+    ctaLabel: "View Deployment Guides",
+    ctaHref: `${STORE_LINKS.github}#deployments`,
     features: [
-      "Everything in Supporter, plus:",
-      "Custom M-of-N threshold signing schemes (e.g. 3-of-5, time-locks)",
-      "Multi-user cold storage approval & recovery drill facilitation",
-      "Air-gapped deployment & hardware fleet configuration guidance",
-      "Dedicated private Electrum node cluster deployment assistance",
-      "Custom internal whitelabeling & compliance reporting tools",
-      "24/7 dedicated incident response & SLA guarantee",
-      "Annual cryptographic audit & key management security review",
+      "Everything in Community",
+      "DIY LoRa packet radio hardware assembly guides (Meshtastic nodes)",
+      "Solar repeater & off-grid battery enclosure blueprints",
+      "School & library offline local Wi-Fi ZIM mirror deployment docs",
+      "Community food forest & seed bank mapping coordination templates",
+      "Emergency disaster drill simulation checklists & communication plans",
+      "Dedicated community forum for local mesh operators & educators",
     ],
   },
 ];
 
-const featureMatrix = [
+const featureComparison = [
   {
-    category: "Custody & Security",
+    category: "Knowledge & Education",
     rows: [
-      { name: "Non-custodial (Keys stored on your device only)", community: true, supporter: true, enterprise: true },
-      { name: "BIP39 seed phrases & passphrase protection", community: true, supporter: true, enterprise: true },
-      { name: "Multisig vaults (2-of-3 out-of-the-box)", community: true, supporter: true, enterprise: true },
-      { name: "Custom M-of-N & time-locked scripts", community: false, supporter: false, enterprise: true },
-      { name: "Hardware signers via air-gap PSBT / QR / USB", community: true, supporter: true, enterprise: true },
-      { name: "Plausible deniability decoy storage", community: true, supporter: true, enterprise: true },
-      { name: "Encrypted multi-device sync", community: false, supporter: true, enterprise: true },
+      { name: "Kiwix ZIM Engine (Wikipedia, MDWiki, Gutenberg)", free: true, supporter: true, hubs: true },
+      { name: "60+ Course disciplines across 7 subject areas", free: true, supporter: true, hubs: true },
+      { name: "Interactive PhET science simulations", free: true, supporter: true, hubs: true },
+      { name: "High-fidelity Lossless & Spatial Audio with transcripts", free: true, supporter: true, hubs: true },
+      { name: "Local ZIM seeding & library caching server docs", free: false, supporter: true, hubs: true },
     ],
   },
   {
-    category: "Transactions & Network",
+    category: "Mesh Communications & Privacy",
     rows: [
-      { name: "Lightning Network instant micropayments", community: true, supporter: true, enterprise: true },
-      { name: "Live mempool fee distribution graph", community: true, supporter: true, enterprise: true },
-      { name: "Replace-By-Fee (RBF) bump & cancel", community: true, supporter: true, enterprise: true },
-      { name: "Child-Pays-For-Parent (CPFP) acceleration", community: true, supporter: true, enterprise: true },
-      { name: "Coin control & manual UTXO selection", community: true, supporter: true, enterprise: true },
-      { name: "Custom Electrum / Bitcoin Core node connection", community: true, supporter: true, enterprise: true },
-      { name: "High-capacity Lightning routing liquidity", community: false, supporter: true, enterprise: true },
+      { name: "Signal Double Ratchet E2E Encryption (secp256k1)", free: true, supporter: true, hubs: true },
+      { name: "Bluetooth Low Energy (BLE) proximity mesh hops", free: true, supporter: true, hubs: true },
+      { name: "LoRa packet radio integration (Meshtastic serial)", free: true, supporter: true, hubs: true },
+      { name: "Zero accounts, zero telemetry, sandboxed local SQLite", free: true, supporter: true, hubs: true },
+      { name: "DIY solar mesh repeater hardware blueprints", free: false, supporter: true, hubs: true },
     ],
   },
   {
-    category: "Privacy & Support",
+    category: "Community & Mutual Aid",
     rows: [
-      { name: "No account, no KYC, no email needed", community: true, supporter: true, enterprise: true },
-      { name: "Zero telemetry or transaction logging", community: true, supporter: true, enterprise: true },
-      { name: "Private low-latency push notification relay", community: false, supporter: true, enterprise: true },
-      { name: "Community GitHub discussions & issues", community: true, supporter: true, enterprise: true },
-      { name: "Priority developer issue triage", community: false, supporter: true, enterprise: true },
-      { name: "Dedicated 24/7 SLA & key recovery consultation", community: false, supporter: false, enterprise: true },
+      { name: "21-Category provision map (Timber, Produce, Citrus, etc.)", free: true, supporter: true, hubs: true },
+      { name: "3D offline globe & passenger rail navigation", free: true, supporter: true, hubs: true },
+      { name: "Unified Fediverse Hub (Mastodon, Bluesky, Lemmy, Nostr)", free: true, supporter: true, hubs: true },
+      { name: "watchOS emergency mesh alerts & survival tips", free: true, supporter: true, hubs: true },
+      { name: "Neighborhood seed bank & tool library coordination guides", free: false, supporter: true, hubs: true },
     ],
   },
 ];
 
 const faqs = [
   {
-    question: "Is Orchard really 100% free?",
+    question: "Why is Orchard 100% free and open source?",
     answer:
-      "Yes! Orchard is open-source software licensed under MIT. You can download it on iOS, Android, and Desktop and use every single core feature—including multisig vaults, hardware signers, custom nodes, and Lightning—without ever paying a cent or registering an account.",
+      "We believe that access to human knowledge, emergency communications, and community mutual aid are fundamental public goods. Knowledge should never be gated behind paywalls or subscriptions, especially in crises.",
   },
   {
-    question: "Does Orchard take any fees from my transactions?",
+    question: "How is the Orchard project funded?",
     answer:
-      "No. Orchard takes zero cut (0 bps) on transactions. You only pay standard Bitcoin network mining fees (or tiny fractions of a cent on Lightning), which go directly and entirely to the decentralized network miners and routing nodes. You always choose your own sat/vB fee rate.",
+      "Orchard is sustained through voluntary community sponsorships, public grants, and contributions from open-source developers, educators, and mesh resilience enthusiasts around the world.",
   },
   {
-    question: "What is the Supporter tier for?",
+    question: "What hardware do I need for LoRa packet radio mesh chats?",
     answer:
-      "The Supporter tier is designed for bitcoin power users who want optional cloud conveniences (such as encrypted watch-only device sync and dedicated Lightning liquidity) while actively supporting independent, open-source Bitcoin development.",
+      "You can chat peer-to-peer over Bluetooth with any nearby iPhone or Mac without extra hardware. For long-range radio meshes spanning miles, you can pair inexpensive, portable LoRa transceivers (such as Heltec V3, LilyGO T-Beam, or RAK Wireless Meshtastic radios) over Bluetooth.",
   },
   {
-    question: "Do you ever have access to my private keys or funds?",
+    question: "How much storage do offline knowledge archives take?",
     answer:
-      "Never. Orchard is non-custodial. Your keys are generated and encrypted locally on your hardware device and are never sent to any server. We cannot access, freeze, or recover your funds—you maintain complete sovereign ownership.",
+      "You choose what to download. Core medical and survival guides take only a few hundred megabytes. Full Wikipedia with images or extensive STEM libraries can range from 10 GB to 90 GB, all seamlessly indexed by Orchard's native ZIM engine.",
   },
   {
-    question: "What happens if Orchard shuts down or disappears?",
+    question: "Can schools or community organizations deploy Orchard in bulk?",
     answer:
-      "Your funds remain completely safe. Orchard adheres strictly to Bitcoin industry standards (BIP39, BIP32, BIP84, BIP174 PSBT, and Output Descriptors). You can restore your seed phrases and wallet descriptors into any other compatible wallet (such as Sparrow, Electrum, or BlueWallet) at any time.",
-  },
-  {
-    question: "Can I connect my own private Bitcoin node?",
-    answer:
-      "Yes. You can connect Orchard to your own Bitcoin Core, Electrs, Fulcrum, or EPS server over SSL or Tor. This ensures 100% privacy with zero third-party data queries.",
+      "Yes! Orchard is licensed under permissive FOSS licenses. Schools, rural clinics, homesteads, and mutual-aid groups can deploy and distribute Orchard freely across devices without licensing fees or registration.",
   },
 ];
 
@@ -186,33 +181,33 @@ function PricingPage() {
       <SiteHeader />
 
       <main className="pb-24">
-        {/* Header section */}
+        {/* Hero header */}
         <section className="bg-hero border-b border-border py-20 sm:py-28">
           <div className="mx-auto max-w-5xl px-6 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-              <Sparkles className="size-3.5 text-accent" aria-hidden="true" />
-              Transparent & Non-Custodial
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
+              <Heart className="size-3.5 text-rose-400" aria-hidden="true" />
+              Public Goods Software
             </span>
 
-            <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
-              Free and open source.{" "}
-              <span className="text-brand">Forever sovereign.</span>
+            <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-extrabold tracking-tight sm:text-6xl">
+              100% Free & Open Source.{" "}
+              <span className="text-brand">Built for Sovereignty.</span>
             </h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              Orchard is built for financial sovereignty. No subscription is required to hold your
-              own keys, build multisig vaults, or pay over Lightning.
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
+              Orchard has no paywalls, locked features, advertisements, or venture-capital surveillance.
+              Every tool is freely accessible to everyone on Earth.
             </p>
 
-            {/* Billing Toggle */}
+            {/* Toggle */}
             <div className="mt-10 flex items-center justify-center gap-3">
               <span className={`text-sm ${!annual ? "font-semibold text-foreground" : "text-muted-foreground"}`}>
-                Monthly
+                Monthly Sponsor
               </span>
               <button
                 type="button"
                 onClick={() => setAnnual(!annual)}
-                className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background ${
+                className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                   annual ? "bg-primary" : "bg-muted"
                 }`}
                 role="switch"
@@ -225,19 +220,19 @@ function PricingPage() {
                 />
               </button>
               <span className={`text-sm ${annual ? "font-semibold text-foreground" : "text-muted-foreground"}`}>
-                Annually{" "}
+                Annual Sponsor{" "}
                 <span className="rounded-full bg-accent/20 px-2 py-0.5 text-xs font-medium text-accent">
-                  Save ~18%
+                  Support Long-Term FOSS
                 </span>
               </span>
             </div>
           </div>
         </section>
 
-        {/* Pricing Cards */}
+        {/* Tiers Grid */}
         <section className="mx-auto max-w-6xl px-6 -mt-8">
           <div className="grid gap-8 lg:grid-cols-3">
-            {pricingTiers.map((tier) => (
+            {tiers.map((tier) => (
               <div
                 key={tier.name}
                 className={`flex flex-col rounded-3xl border bg-card p-8 shadow-card transition-all ${
@@ -248,7 +243,7 @@ function PricingPage() {
               >
                 {tier.featured && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-primary to-accent px-4 py-1 text-xs font-semibold text-primary-foreground uppercase tracking-wider">
-                    Most Popular
+                    Community Funded
                   </div>
                 )}
 
@@ -257,7 +252,7 @@ function PricingPage() {
                     {tier.badge}
                   </span>
                   <h2 className="mt-4 text-2xl font-bold tracking-tight">{tier.name}</h2>
-                  <p className="mt-2 text-sm text-muted-foreground">{tier.description}</p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{tier.description}</p>
                 </div>
 
                 <div className="my-8 border-y border-border py-6">
@@ -267,11 +262,7 @@ function PricingPage() {
                     </span>
                     {tier.period && (
                       <span className="text-xs text-muted-foreground">
-                        {tier.priceMonthly === "$0"
-                          ? "/ forever"
-                          : annual
-                            ? "/ billed annually"
-                            : "/ month"}
+                        {tier.period}
                       </span>
                     )}
                   </div>
@@ -295,7 +286,9 @@ function PricingPage() {
                     variant={tier.featured ? "default" : "secondary"}
                     asChild
                   >
-                    <a href={tier.ctaHref}>{tier.ctaLabel}</a>
+                    <a href={tier.ctaHref} target={tier.ctaHref.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">
+                      {tier.ctaLabel}
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -303,51 +296,50 @@ function PricingPage() {
           </div>
         </section>
 
-        {/* Fee transparency banner */}
+        {/* Public Goods Commitment Banner */}
         <section className="mx-auto mt-24 max-w-6xl px-6">
           <div className="rounded-3xl border border-border bg-gradient-to-br from-card to-secondary/40 p-8 sm:p-12">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
               <div className="max-w-2xl">
                 <span className="inline-flex items-center gap-2 text-xs font-semibold text-brand uppercase tracking-wider">
-                  <Lock className="size-3.5" aria-hidden="true" />
-                  Transparent Fee Policy
+                  <ShieldCheck className="size-4" aria-hidden="true" />
+                  Our Open Source Covenant
                 </span>
                 <h3 className="mt-2 text-2xl font-bold sm:text-3xl">
-                  0% wallet markup. You only pay miners.
+                  Zero telemetry. No ads. Uncompromised privacy.
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Many wallets add a hidden 0.5% – 2% surcharge on sends or swaps. Orchard is built
-                  on true Bitcoin principles: we charge 0% on transactions. You only pay network miner
-                  fees, which you customize down to the exact sat/vB.
+                  Orchard will never sell user data, inject tracking scripts, or place educational resources behind paywalls.
+                  All software is peer-auditable and distributed under permissive open licenses for the benefit of humanity.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                 <div className="rounded-2xl border border-border/80 bg-background/60 p-4 text-center">
-                  <div className="text-2xl font-bold text-accent">0%</div>
-                  <div className="mt-1 text-xs text-muted-foreground">Wallet fee</div>
+                  <div className="text-2xl font-bold text-accent">100%</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Free & Open Source</div>
                 </div>
                 <div className="rounded-2xl border border-border/80 bg-background/60 p-4 text-center">
-                  <div className="text-2xl font-bold text-foreground">100%</div>
-                  <div className="mt-1 text-xs text-muted-foreground">To network miners</div>
+                  <div className="text-2xl font-bold text-foreground">0</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Tracking scripts</div>
                 </div>
                 <div className="col-span-2 sm:col-span-1 rounded-2xl border border-border/80 bg-background/60 p-4 text-center">
-                  <div className="text-2xl font-bold text-primary">&lt; $0.001</div>
-                  <div className="mt-1 text-xs text-muted-foreground">Lightning fees</div>
+                  <div className="text-2xl font-bold text-primary">Offline</div>
+                  <div className="mt-1 text-xs text-muted-foreground">By default</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Feature Matrix Table */}
+        {/* Feature Comparison Matrix */}
         <section className="mx-auto mt-28 max-w-6xl px-6">
           <div className="text-center">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Compare features across plans
+              Compare features across tiers
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Everything essential for self-custody is open source and free.
+              Every single core feature is included free of charge for all users.
             </p>
           </div>
 
@@ -356,13 +348,13 @@ function PricingPage() {
               <thead>
                 <tr className="border-b border-border bg-secondary/60">
                   <th className="p-4 sm:p-5 font-semibold text-foreground">Feature</th>
-                  <th className="p-4 sm:p-5 font-semibold text-center text-foreground">Community</th>
+                  <th className="p-4 sm:p-5 font-semibold text-center text-foreground">Community ($0)</th>
                   <th className="p-4 sm:p-5 font-semibold text-center text-primary">Supporter</th>
-                  <th className="p-4 sm:p-5 font-semibold text-center text-foreground">Enterprise</th>
+                  <th className="p-4 sm:p-5 font-semibold text-center text-foreground">Resilience Hubs</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
-                {featureMatrix.map((section) => (
+                {featureComparison.map((section) => (
                   <tr key={section.category} className="contents">
                     <td
                       colSpan={4}
@@ -374,7 +366,7 @@ function PricingPage() {
                       <tr key={row.name} className="hover:bg-secondary/20 transition-colors">
                         <td className="px-5 py-4 font-medium text-foreground">{row.name}</td>
                         <td className="px-5 py-4 text-center">
-                          {row.community ? (
+                          {row.free ? (
                             <Check className="mx-auto size-4 text-accent" aria-hidden="true" />
                           ) : (
                             <span className="text-xs text-muted-foreground">—</span>
@@ -388,7 +380,7 @@ function PricingPage() {
                           )}
                         </td>
                         <td className="px-5 py-4 text-center">
-                          {row.enterprise ? (
+                          {row.hubs ? (
                             <Check className="mx-auto size-4 text-accent" aria-hidden="true" />
                           ) : (
                             <span className="text-xs text-muted-foreground">—</span>
@@ -410,7 +402,7 @@ function PricingPage() {
               Frequently asked questions
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Clear answers on licensing, security, and custody.
+              Questions about our public goods philosophy, mesh hardware, and deployment.
             </p>
           </div>
 
@@ -438,29 +430,29 @@ function PricingPage() {
         <section className="mx-auto mt-28 max-w-5xl px-6 text-center">
           <div className="rounded-3xl border border-border bg-card p-10 sm:p-16 shadow-card">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Start holding your own bitcoin
+              Carry human knowledge and mesh power everywhere
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-              Free, private, and available right now on iOS, Android, and Desktop.
+              Free, open source, and available natively for iOS, iPadOS, macOS, and Apple Watch.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Button size="lg" asChild>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
+              <Button size="lg" className="shadow-glow" asChild>
                 <a href={STORE_LINKS.ios} target="_blank" rel="noopener noreferrer">
                   <Apple className="size-4" aria-hidden="true" />
                   Download for iOS
                 </a>
               </Button>
               <Button size="lg" variant="secondary" asChild>
-                <a href={STORE_LINKS.android} target="_blank" rel="noopener noreferrer">
-                  <Smartphone className="size-4" aria-hidden="true" />
-                  Download for Android
+                <a href={STORE_LINKS.macos} target="_blank" rel="noopener noreferrer">
+                  <Monitor className="size-4" aria-hidden="true" />
+                  macOS & watchOS
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href={STORE_LINKS.desktop} target="_blank" rel="noopener noreferrer">
-                  <Monitor className="size-4" aria-hidden="true" />
-                  Desktop
+                <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer">
+                  <Github className="size-4" aria-hidden="true" />
+                  View on GitHub
                 </a>
               </Button>
             </div>

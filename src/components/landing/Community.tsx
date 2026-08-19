@@ -1,25 +1,27 @@
 const quotes = [
   {
     quote:
-      "The first wallet I hand to someone new to bitcoin. They are sending a payment within a minute.",
+      "When storms knocked out power and cell towers, our neighborhood mesh kept emergency coordination and welfare check-ins alive for days without missing a beat.",
     name: "Marta Oliveira",
-    role: "Meetup organiser, Lisbon",
-  },
-  {
-    quote: "Fee bumping and coin control in a mobile app that still feels calm. Rare combination.",
-    name: "Devon Reyes",
-    role: "Self-custody educator",
-  },
-  {
-    quote: "I run my own node and it connected in under a minute. No accounts, no email, no fuss.",
-    name: "Aiko Tanaka",
-    role: "Node operator",
+    role: "Community Resilience Organizer",
   },
   {
     quote:
-      "Multisig used to be a weekend project. Now it is a guided setup I can walk a client through.",
+      "Having full offline Wikipedia, MDWiki, and PhET simulations on my iPad has completely transformed how I teach in rural, disconnected classrooms.",
+    name: "Devon Reyes",
+    role: "STEM Educator & Field Researcher",
+  },
+  {
+    quote:
+      "The 21-category provision map made it effortless to organize our neighborhood seed bank, tool library, and local citrus exchange.",
+    name: "Aiko Tanaka",
+    role: "Urban Agroforestry Lead",
+  },
+  {
+    quote:
+      "Signal Double Ratchet over LoRa packet radio is the gold standard for off-grid communication. Having it native in SwiftUI is incredible.",
     name: "Samuel Adeyemi",
-    role: "Security consultant",
+    role: "Emergency Communications Specialist",
   },
 ];
 
