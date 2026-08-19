@@ -12,43 +12,43 @@ import {
 const capabilities = [
   {
     icon: BookOpen,
-    title: "Massive Offline Knowledge (ZIM / Kiwix)",
-    body: "Host gigabytes of curated human knowledge — medical encyclopedias, emergency survival manuals, agricultural guides, and full Wikipedia snapshots stored locally.",
+    title: "An encyclopedia in your pocket.",
+    body: "Carry medical guides, survival manuals, and full Wikipedia snapshots with you everywhere. Access the answers you need, even when the internet goes down.",
   },
   {
     icon: Lock,
-    title: "Double-Ratchet E2E Encryption",
-    body: "Signal Protocol-grade identity keys (secp256k1). Message with forward secrecy over mesh or relays without phone numbers or emails.",
+    title: "Truly private conversations.",
+    body: "Chat securely without ever providing a phone number or email. Every message is locked with Signal-grade encryption, ensuring your data belongs only to you.",
   },
   {
     icon: ProvisionIcon,
-    title: "21-Category Provision Directory",
-    body: "Map and filter local provisions across Timber, Metal, Textiles, Food Staples, Grains, Bakery, Meats, Seafood, Produce, Nuts, Herbs, and Citrus.",
+    title: "Find essentials, locally.",
+    body: "Instantly map and filter local providers for food staples, textiles, timber, and produce. Discover exactly what you need from your community at a glance.",
   },
   {
     icon: Train,
-    title: "Offline Passenger Rail & Transit",
-    body: "Offline-cached national and regional passenger rail routes (Amtrak, commuter rail, walking, transit) with step-by-step navigation with zero cellular service.",
+    title: "Navigate without a signal.",
+    body: "Get step-by-step transit and walking directions with zero cellular service. National and regional routes are cached right on your device so you never lose your way.",
   },
   {
     icon: Headphones,
-    title: "Audiophile Player & Synced Transcripts",
-    body: "Lossless and Spatial Audio playback with Dolby Atmos, dynamic buffer scrubbers, video-to-audio toggles, and live synced educational transcripts.",
+    title: "Immersive, intelligent audio.",
+    body: "Experience studio-quality Spatial Audio that syncs perfectly with live educational transcripts. Toggle between video and audio instantly to save battery while learning.",
   },
   {
     icon: Watch,
-    title: "Orchard on Wrist (watchOS)",
-    body: "Receive emergency mesh alerts, glanceable offline survival guides, and audio playback controls directly from your Apple Watch.",
+    title: "Lifesaving alerts on your wrist.",
+    body: "Keep your phone safely tucked away. Receive critical emergency alerts, glance at survival guides, and control your playback right from your Apple Watch.",
   },
   {
     icon: ShieldAlert,
-    title: "Zero Telemetry & Sandboxed Storage",
-    body: "Zero tracking, no central accounts, and no analytics. Your data, maps, and keys reside strictly in encrypted, sandboxed local SQLite.",
+    title: "Total data sovereignty.",
+    body: "No accounts, no tracking, and zero analytics. Your maps, keys, and personal data stay strictly locked and encrypted on your own hardware.",
   },
   {
     icon: Layers,
-    title: "Universal Open Protocols",
-    body: "Native support for ActivityPub (Mastodon), AT Protocol (Bluesky), Lemmy APIs, Nostr relays, and Meshtastic/LoRa packet radio.",
+    title: "One app. Every network.",
+    body: "Break free from walled gardens. Seamlessly follow and message friends across diverse social networks and off-grid radio meshes without ever switching apps.",
   },
 ];
 
@@ -57,12 +57,12 @@ export function FeatureGrid() {
     <section id="features" className="border-t border-border py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium text-brand uppercase tracking-wider">Deep-Dive Capabilities</p>
-          <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-            Engineered for complete self-reliance
+          <p className="text-sm font-medium text-brand uppercase tracking-wider">Designed for Real Life</p>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+            Everything you need when it matters most
           </h2>
-          <p className="mt-3 text-muted-foreground">
-            A comprehensive suite of offline tools, open protocols, and communication channels packaged into a single native SwiftUI binary.
+          <p className="mt-3 text-muted-foreground text-base leading-relaxed">
+            Built from the ground up for peace of mind, off-grid freedom, and effortless community connection.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export function FeatureGrid() {
               <span className="inline-flex size-11 items-center justify-center rounded-xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                 <Icon className="size-5" aria-hidden="true" />
               </span>
-              <h3 className="mt-5 text-base font-semibold">{title}</h3>
+              <h3 className="mt-5 text-base font-semibold text-foreground">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
             </article>
           ))}

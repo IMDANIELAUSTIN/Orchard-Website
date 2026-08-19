@@ -31,7 +31,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button asChild size="sm" className="hidden sm:inline-flex">
+          <Button asChild size="sm" className="hidden sm:inline-flex bg-rose-600 hover:bg-rose-500 text-white font-medium rounded-xl shadow-sm">
             <a href="/#download">
               <Download className="mr-1.5 size-3.5" aria-hidden="true" />
               Get Orchard

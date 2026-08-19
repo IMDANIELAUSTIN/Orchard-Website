@@ -4,23 +4,23 @@ const pillars = [
   {
     id: "mesh",
     icon: Radio,
-    badge: "Off-Grid Communications",
-    title: "Peer-to-Peer Mesh Communications",
-    subtitle: "Signal Protocol & LoRa Radio Messaging",
+    badge: "Off-Grid Communication",
+    title: "Stay connected anywhere.",
+    subtitle: "Peer-to-peer messaging that works without cell towers.",
     description:
-      "End-to-end encrypted messaging with zero server dependence. Chat peer-to-peer over Bluetooth Low Energy (BLE), local Wi-Fi Direct, Long Range (LoRa) packet radio, and decentralized Nostr relays with forward secrecy and signal hop routing.",
-    tags: ["Signal Double Ratchet", "LoRa Packet Radio", "BLE Discovery", "Nostr NIP-04/44", "Hop Routing"],
+      "Keep in touch with family and neighbors even when the power grid or internet goes dark. Messages hop securely from device to device with Signal-grade encryption and zero dependence on central servers.",
+    tags: ["Signal Double Ratchet", "LoRa Packet Radio", "BLE Discovery", "Nostr Relays", "Multi-Hop Mesh"],
     accentColor: "from-blue-500/20 to-cyan-500/20",
     iconColor: "text-cyan-400",
   },
   {
     id: "library",
     icon: BookOpen,
-    badge: "Knowledge Hub",
-    title: "The Offline Super-Library & Course Center",
-    subtitle: "Thousands of Books, Videos, and Interactive Labs",
+    badge: "Infinite Knowledge",
+    title: "Human knowledge, always offline.",
+    subtitle: "Medical guides, encyclopedias, and courses on your device.",
     description:
-      "Built-in reader and offline archive integration for Kiwix/ZIM (full Wikipedia, MDWiki, Project Gutenberg), 60+ course disciplines across 7 subject groups (Science, Tech, Languages, Arts, Law, PE, Economics), interactive PhET science simulations, and vocational blueprints.",
+      "Never lose access to essential answers. Carry full offline copies of Wikipedia, emergency survival handbooks, interactive science labs, and vocational courses right on your iPhone, iPad, or Mac.",
     tags: ["Kiwix ZIM Engine", "Full Wikipedia & MDWiki", "PhET Simulations", "60+ Course Disciplines", "Project Gutenberg"],
     accentColor: "from-emerald-500/20 to-teal-500/20",
     iconColor: "text-emerald-400",
@@ -28,11 +28,11 @@ const pillars = [
   {
     id: "map",
     icon: Globe2,
-    badge: "Community Resilience",
-    title: "Connection Map, Local Markets & Events",
-    subtitle: "3D Globe, Food Security & Mutual Aid",
+    badge: "Local Abundance",
+    title: "Build a resilient neighborhood.",
+    subtitle: "Local food markets, mutual aid, and offline transit maps.",
     description:
-      "Discover and map local food forests, farmers markets, water sources, and tool libraries across 21 provision categories. Discover and host block parties, job fairs, repair clinics, and food drives with offline GPS and passenger rail transit routing.",
+      "Know where to find clean water, fresh produce, seed banks, and tool libraries in your area. Coordinate community events and navigate passenger rail routes without cellular service.",
     tags: ["3D Offline Globe", "21 Provision Categories", "Mutual Aid Exchanges", "Passenger Rail Transit", "Offline GPS"],
     accentColor: "from-amber-500/20 to-orange-500/20",
     iconColor: "text-amber-400",
@@ -41,10 +41,10 @@ const pillars = [
     id: "fediverse",
     icon: Share2,
     badge: "Open Social",
-    title: "Unified Fediverse & Open Social Hub",
-    subtitle: "Mastodon, Bluesky, Lemmy & RSS in One Stream",
+    title: "Social feeds that respect you.",
+    subtitle: "Your favorite open networks in one calm, chronological stream.",
     description:
-      "Consume culture without algorithms. Aggregate Mastodon (ActivityPub), Bluesky (ATProto), Lemmy forum discussions, Nostr notes, and custom RSS feeds into 16 categorized timeline channels with on-device chronological caching.",
+      "Follow people and discussions across Mastodon, Bluesky, Lemmy, and Nostr without algorithmic manipulation, ad tracking, or corporate walled gardens.",
     tags: ["ActivityPub (Mastodon)", "AT Protocol (Bluesky)", "Lemmy Communities", "Nostr Notes", "16 Channels"],
     accentColor: "from-purple-500/20 to-indigo-500/20",
     iconColor: "text-purple-400",
@@ -58,13 +58,13 @@ export function Pillars() {
         <div className="text-center max-w-3xl mx-auto">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/80 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
             <Sparkles className="size-3.5" aria-hidden="true" />
-            Architectural Core
+            Core Capabilities
           </span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">
             Four Pillars of Resilience
           </h2>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground">
-            Engineered from the ground up for total autonomy, collective aid, and continuous learning — online or entirely off the grid.
+            Engineered from the ground up for peace of mind, mutual aid, and continuous learning — online or completely off the grid.
           </p>
         </div>
 

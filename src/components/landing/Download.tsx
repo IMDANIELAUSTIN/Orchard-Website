@@ -54,28 +54,47 @@ export function Download() {
             Carry resilient communications, massive offline libraries, and neighborhood mutual-aid in your pocket.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3.5">
-            <Button size="lg" className="shadow-glow" asChild>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <Button
+              size="lg"
+              className="h-13 px-8 rounded-2xl bg-rose-600 hover:bg-rose-500 text-white font-semibold text-base shadow-lg shadow-rose-950/60 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              asChild
+            >
               <a href={STORE_LINKS.ios} target="_blank" rel="noopener noreferrer">
-                <Apple className="size-4" aria-hidden="true" />
-                Download for iOS
+                <Apple className="size-5 mr-1" aria-hidden="true" />
+                Get Orchard for iOS
               </a>
             </Button>
-            <Button size="lg" variant="secondary" asChild>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="h-13 px-7 rounded-2xl font-semibold text-base"
+              asChild
+            >
               <a href={STORE_LINKS.macos} target="_blank" rel="noopener noreferrer">
-                <Monitor className="size-4" aria-hidden="true" />
+                <Monitor className="size-5 mr-1" aria-hidden="true" />
                 macOS & iPadOS
               </a>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-13 px-7 rounded-2xl font-semibold text-base"
+              asChild
+            >
               <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer">
-                <Github className="size-4" aria-hidden="true" />
+                <Github className="size-5 mr-1" aria-hidden="true" />
                 GitHub Repository
               </a>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-13 px-7 rounded-2xl font-semibold text-base"
+              asChild
+            >
               <a href={STORE_LINKS.fediverse} target="_blank" rel="noopener noreferrer">
-                <Share2 className="size-4" aria-hidden="true" />
+                <Share2 className="size-5 mr-1" aria-hidden="true" />
                 Mastodon / Lemmy
               </a>
             </Button>
