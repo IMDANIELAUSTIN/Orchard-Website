@@ -15,6 +15,7 @@ export default defineConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
+      failOnError: false,
       routes: [
         "/",
         "/pricing",
@@ -25,8 +26,6 @@ export default defineConfig({
         "/blog/local-resilience-exchanges-mutual-aid",
         "/rss.xml",
         "/sitemap.xml",
-        "/auth",
-        "/admin",
       ],
     },
   },
