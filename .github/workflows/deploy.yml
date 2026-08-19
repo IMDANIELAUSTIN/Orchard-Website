@@ -1,0 +1,77 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Prepare static output for GitHub Pages
+        run: |
+          # Determine the build output folder (.output/public for Nitro/TanStack Start or dist for standard Vite)
+          if [ -d ".output/public" ]; then
+            OUT_DIR=".output/public"
+          elif [ -d "dist" ]; then
+            OUT_DIR="dist"
+          else
+            echo "Build output directory not found!"
+            exit 1
+          fi
+
+          echo "Output directory is $OUT_DIR"
+
+          # Disable Jekyll processing on GitHub Pages
+          touch "$OUT_DIR/.nojekyll"
+
+          # SPA fallback: ensure 404.html routes back to index.html for client-side routing
+          if [ -f "$OUT_DIR/index.html" ] && [ ! -f "$OUT_DIR/404.html" ]; then
+            cp "$OUT_DIR/index.html" "$OUT_DIR/404.html"
+          fi
+
+          # Output directory path for artifact upload
+          echo "DEPLOY_DIR=$OUT_DIR" >> $GITHUB_ENV
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.DEPLOY_DIR }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
