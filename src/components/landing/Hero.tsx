@@ -9,20 +9,20 @@ export function Hero() {
       <div className="mx-auto max-w-6xl px-6 text-center">
         <div className="reveal inline-flex items-center gap-2 rounded-full border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] px-4 py-1.5 text-xs font-semibold tracking-wider text-[#290B00]/70 dark:text-[#F6F4F3]/70 uppercase shadow-sm">
           <span className="inline-block size-2 rounded-full bg-emerald-500 animate-pulse" />
-          OPEN SOURCE · ZERO TRACKING · WORKS 100% OFFLINE · NO ACCOUNTS
+          NO EMAIL OR PHONE NUMBER REQUIRED · WORKS 100% OFFLINE · ZERO TRACKING
         </div>
 
         <h1 className="reveal delay-1 mx-auto mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-balance text-[#290B00] dark:text-[#F6F4F3] sm:text-6xl lg:text-7xl">
-          Knowledge, connection, and community that{" "}
+          Knowledge and Community Regardless of{" "}
           <span className="bg-gradient-to-r from-[#290B00] via-[#5C230C] to-[#8C3818] dark:from-[#F6F4F3] dark:via-[#DFCFC9] dark:to-[#C2B2AC] bg-clip-text text-transparent">
-            never goes dark.
+            Connection.
           </span>
         </h1>
 
         <p className="reveal delay-2 mx-auto mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed text-[#290B00]/70 dark:text-[#F6F4F3]/70">
-          A connectivity-agnostic toolkit combining offline encyclopedias, peer-to-peer mesh radio,
-          local mutual-aid markets, and ad-free community feeds. Built to keep you informed, connected,
-          and self-reliant — even when the grid goes down.
+          A connectivity-agnostic tool that combines offline world knowledge, peer-to-peer mesh communication,
+          local markets, and ad-free social media feeds. Built to keep communities informed, connected,
+          and self-reliant even when the grid goes down.
         </p>
 
         {/* Action Buttons — 32pt rhythm & 52pt touch target */}
@@ -32,37 +32,16 @@ export function Hero() {
             className="h-13 px-8 rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-semibold text-base shadow-lg shadow-[#290B00]/20 dark:shadow-[#F6F4F3]/10 transition-all hover:scale-[1.02] active:scale-[0.98] border border-transparent dark:border-[#F6F4F3]/20"
             asChild
           >
-            <a href={STORE_LINKS.ios} target="_blank" rel="noopener noreferrer">
+            <a href={STORE_LINKS.testflight} target="_blank" rel="noopener noreferrer">
               <Apple className="size-5 mr-1" aria-hidden="true" />
-              Get Orchard for iOS
+              Test Orchard Today on iOS
             </a>
           </Button>
-          <Button
-            size="lg"
-            variant="secondary"
-            className="h-13 px-7 rounded-full bg-[#EAE5E2] hover:bg-[#DDD6D2] text-[#290B00] dark:bg-[#381406] dark:hover:bg-[#481C0C] dark:text-[#F6F4F3] font-semibold text-base shadow-sm transition-all border border-[#290B00]/5 dark:border-[#F6F4F3]/10"
-            asChild
-          >
-            <a href={STORE_LINKS.macos} target="_blank" rel="noopener noreferrer">
-              <Monitor className="size-5 mr-1" aria-hidden="true" />
-              macOS & Apple Watch
-            </a>
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="h-13 px-7 rounded-full border border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] hover:bg-[#EAE5E2] dark:hover:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] font-semibold text-base shadow-sm transition-all"
-            asChild
-          >
-            <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer">
-              <Github className="size-5 mr-1" aria-hidden="true" />
-              View on GitHub
-            </a>
-          </Button>
+
         </div>
 
         <p className="reveal delay-3 mt-4 text-xs font-medium text-[#290B00]/60 dark:text-[#F6F4F3]/60">
-          Native SwiftUI app. Engineered for iPhone, iPad, Mac, and Apple Watch.
+          Native SwiftUI App Made for Your Apple Devices.
         </p>
 
         {/* Feature quick highlight badges */}

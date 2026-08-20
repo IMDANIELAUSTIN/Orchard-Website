@@ -61,22 +61,12 @@ export function Download() {
               className="h-13 px-8 rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-semibold text-base shadow-lg shadow-[#290B00]/20 dark:shadow-[#F6F4F3]/10 transition-all hover:scale-[1.02] active:scale-[0.98] border border-transparent dark:border-[#F6F4F3]/20"
               asChild
             >
-              <a href={STORE_LINKS.ios} target="_blank" rel="noopener noreferrer">
+              <a href={STORE_LINKS.testflight} target="_blank" rel="noopener noreferrer">
                 <Apple className="size-5 mr-1" aria-hidden="true" />
-                Get Orchard for iOS
+                Test Orchard Today on iOS
               </a>
             </Button>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="h-13 px-7 rounded-full bg-[#EAE5E2] hover:bg-[#DDD6D2] text-[#290B00] dark:bg-[#481C0C] dark:hover:bg-[#56220E] dark:text-[#F6F4F3] font-semibold text-base border border-[#290B00]/5 dark:border-[#F6F4F3]/10"
-              asChild
-            >
-              <a href={STORE_LINKS.macos} target="_blank" rel="noopener noreferrer">
-                <Monitor className="size-5 mr-1" aria-hidden="true" />
-                macOS & iPadOS
-              </a>
-            </Button>
+
             <Button
               size="lg"
               variant="outline"
@@ -142,33 +132,25 @@ export function SiteFooter() {
     <footer className="border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-12 bg-[#F6F4F3] dark:bg-[#290B00]">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 text-sm text-[#290B00]/70 dark:text-[#F6F4F3]/70 sm:flex-row">
         <div>
-          <p className="font-bold text-[#290B00] dark:text-[#F6F4F3]">Orchard Super-App</p>
+          <p className="font-bold text-[#290B00] dark:text-[#F6F4F3]">The Orchard App</p>
           <p className="text-xs text-[#290B00]/60 dark:text-[#F6F4F3]/60 mt-1">
-            © {new Date().getFullYear()} Orchard Project. Free & Open Source Software (FOSS).
+            © {new Date().getFullYear()} The Orchard Project.
           </p>
         </div>
 
         <nav className="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-medium">
-          <a href="/#pillars" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
-            Pillars
-          </a>
+
           <a href="/#features" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
-            Capabilities
+            Features
           </a>
           <a href="/#how" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
-            How it works
-          </a>
-          <a href="/#specs" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
-            Tech Specs
+            Benefits
           </a>
           <a href="/pricing" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
-            Open Source
+            Support
           </a>
           <a href="/blog" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
             Blog
-          </a>
-          <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
-            GitHub
           </a>
         </nav>
 
