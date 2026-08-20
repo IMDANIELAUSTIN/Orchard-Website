@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "@tanstack/react-router";
 import { Trees, Download, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -13,6 +13,38 @@ const links = [
 
 export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showCta, setShowCta] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/" || location.pathname === "";
+
+  useEffect(() => {
+    // On subpages without the hero CTA, keep the header button visible
+    if (!isHome) {
+      setShowCta(true);
+      return;
+    }
+
+    const checkHeroCta = () => {
+      const heroCtaEl = document.getElementById("hero-cta");
+      if (!heroCtaEl) {
+        setShowCta(true);
+        return;
+      }
+      // Trigger appearance once the bottom of the hero CTA scrolls past the top navigation bar (56px)
+      const rect = heroCtaEl.getBoundingClientRect();
+      setShowCta(rect.bottom <= 56);
+    };
+
+    checkHeroCta();
+
+    window.addEventListener("scroll", checkHeroCta, { passive: true });
+    window.addEventListener("resize", checkHeroCta, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", checkHeroCta);
+      window.removeEventListener("resize", checkHeroCta);
+    };
+  }, [isHome, location.pathname]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#290B00]/10 dark:border-[#F6F4F3]/10 bg-[#F6F4F3]/80 dark:bg-[#290B00]/85 backdrop-blur-2xl [backdrop-filter:saturate(180%)_blur(20px)] [-webkit-backdrop-filter:saturate(180%)_blur(20px)] transition-all">
@@ -44,16 +76,25 @@ export function SiteHeader() {
 
         {/* Right CTA & Mobile Toggle */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <Button
-            asChild
-            size="sm"
-            className="hidden sm:inline-flex bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-medium rounded-full shadow-sm text-xs h-8 px-3.5 border border-transparent dark:border-[#F6F4F3]/20"
+          {/* Tablet & Desktop: Gracefully appears only after scrolling past the Hero CTA */}
+          <div
+            className={`hidden md:inline-flex transition-all duration-300 ease-out ${
+              showCta
+                ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+                : "opacity-0 -translate-y-1.5 scale-95 pointer-events-none"
+            }`}
           >
-            <a href="/#download">
-              <Download className="mr-1.5 size-3.5" aria-hidden="true" />
-              Get Orchard
-            </a>
-          </Button>
+            <Button
+              asChild
+              size="sm"
+              className="bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-medium rounded-full shadow-sm text-xs h-8 px-3.5 border border-transparent dark:border-[#F6F4F3]/20"
+            >
+              <a href="/#download">
+                <Download className="mr-1.5 size-3.5" aria-hidden="true" />
+                Get Orchard
+              </a>
+            </Button>
+          </div>
 
           {/* Mobile Hamburger Toggle Button (below md) */}
           <button

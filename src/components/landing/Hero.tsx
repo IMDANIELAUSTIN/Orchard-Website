@@ -22,7 +22,7 @@ export function Hero() {
         </p>
 
         {/* Action Buttons — 32pt rhythm & 52pt touch target */}
-        <div className="reveal delay-3 mt-8 flex flex-wrap items-center justify-center gap-4">
+        <div id="hero-cta" className="reveal delay-3 mt-8 flex flex-wrap items-center justify-center gap-4">
           <Button
             size="lg"
             className="h-13 px-8 rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-semibold text-base shadow-lg shadow-[#290B00]/20 dark:shadow-[#F6F4F3]/10 transition-all hover:scale-[1.02] active:scale-[0.98] border border-transparent dark:border-[#F6F4F3]/20"
@@ -33,7 +33,6 @@ export function Hero() {
               Test Orchard Today on iOS
             </a>
           </Button>
-
         </div>
 
         <p className="reveal delay-3 mt-4 text-xs font-medium text-[#290B00]/60 dark:text-[#F6F4F3]/60">
