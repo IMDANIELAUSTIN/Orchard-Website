@@ -14,9 +14,9 @@ export function Hero() {
         </h1>
 
         <p className="reveal delay-2 mx-auto mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed text-[#290B00]/70 dark:text-[#F6F4F3]/70">
-          A connectivity-agnostic tool that combines offline world knowledge, peer-to-peer mesh communication,
-          local markets, and ad-free social media feeds. Built to keep communities informed, connected,
-          and self-reliant, if and when data networks are unavailable.
+          A Connectivity-Agnostic Social Network That Combines Offline World Knowledge, Peer-to-Peer Mesh Communication,
+          Local Markets, and Ad-Free Videos-on-Demand. Designed for Informed Communities Looking to Stay Connected
+          and Sovereign, Even When Data Networks Become Unavailable.
         </p>
 
         {/* Action Buttons — 32pt rhythm & 52pt touch target */}
@@ -31,9 +31,6 @@ export function Hero() {
               Test Orchard Today on iOS
             </a>
           </Button>
-          <p className="text-xs text-[#290B00]/60 dark:text-[#F6F4F3]/60 font-medium">
-            Native SwiftUI App Made for Your Apple Devices.
-          </p>
         </div>
 
         <div className="reveal delay-5 mt-12">
