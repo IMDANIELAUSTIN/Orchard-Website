@@ -152,6 +152,9 @@ export function SiteFooter() {
           <a href="/blog" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
             Blog
           </a>
+          <a href="/faq" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
+            FAQ
+          </a>
         </nav>
 
         {/* Theme Toggle at bottom */}

@@ -7,6 +7,7 @@ const links = [
   { label: "Benefits", href: "/#how" },
   { label: "Support", href: "/pricing" },
   { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export function SiteHeader() {

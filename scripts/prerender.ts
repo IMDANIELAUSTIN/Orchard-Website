@@ -4,6 +4,7 @@ import { dirname } from "path";
 const routes = [
   "/",
   "/pricing",
+  "/faq",
   "/blog",
   "/blog/offline-first-human-knowledge",
   "/blog/mesh-networking-lora-bluetooth",
