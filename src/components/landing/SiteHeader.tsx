@@ -122,7 +122,7 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-semibold text-[#290B00] dark:text-[#F6F4F3] hover:text-[#5C230C] dark:hover:text-[#DFCFC9] transition-colors py-1"
+                className="text-base font-semibold text-[#290B00] dark:text-[#F6F4F3] hover:opacity-75 transition-opacity py-1"
               >
                 {link.label}
               </a>

@@ -70,7 +70,7 @@ function BlogIndex() {
                 </span>
               </div>
               <h2 className="mt-4 text-2xl font-bold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">
-                <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:text-[#5C230C] dark:hover:text-[#DFCFC9] transition-colors">
+                <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:opacity-75 transition-opacity">
                   {post.title}
                 </Link>
               </h2>

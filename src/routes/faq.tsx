@@ -335,7 +335,7 @@ function FaqPage() {
                   placeholder="Search questions (e.g., LoRa, Wikipedia, Apple Watch, privacy, SQLite)..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="h-14 rounded-full pl-12 pr-6 border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] text-[#290B00] dark:text-[#F6F4F3] placeholder:text-[#290B00]/40 dark:placeholder:text-[#F6F4F3]/40 shadow-sm focus:bg-white dark:focus:bg-[#481C0C] text-base"
+                  className="h-14 rounded-full pl-12 pr-6 border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] text-[#290B00] dark:text-[#F6F4F3] placeholder:text-[#290B00]/40 dark:placeholder:text-[#F6F4F3]/40 shadow-sm focus:bg-[#F6F4F3] dark:focus:bg-[#481C0C] text-base"
                 />
               </div>
             </div>

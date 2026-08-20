@@ -9,10 +9,7 @@ export function Hero() {
       <div className="mx-auto max-w-6xl px-6 text-center">
 
         <h1 className="reveal delay-1 mx-auto mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-balance text-[#290B00] dark:text-[#F6F4F3] sm:text-6xl lg:text-7xl">
-          Knowledge and Community Regardless of{" "}
-          <span className="bg-gradient-to-r from-[#290B00] via-[#5C230C] to-[#8C3818] dark:from-[#F6F4F3] dark:via-[#DFCFC9] dark:to-[#C2B2AC] bg-clip-text text-transparent">
-            Connection.
-          </span>
+          Knowledge and Community Regardless of Connection.
         </h1>
 
         <p className="reveal delay-2 mx-auto mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed text-[#290B00]/70 dark:text-[#F6F4F3]/70">

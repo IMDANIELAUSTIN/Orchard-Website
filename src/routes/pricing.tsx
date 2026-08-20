@@ -190,10 +190,7 @@ function PricingPage() {
             </span>
 
             <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3] sm:text-6xl">
-              100% Free & Open Source.{" "}
-              <span className="bg-gradient-to-r from-[#290B00] via-[#5C230C] to-[#8C3818] dark:from-[#F6F4F3] dark:via-[#DFCFC9] dark:to-[#C2B2AC] bg-clip-text text-transparent">
-                Built for Sovereignty.
-              </span>
+              100% Free & Open Source. Built for Sovereignty.
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg text-[#290B00]/70 dark:text-[#F6F4F3]/70 leading-relaxed">
