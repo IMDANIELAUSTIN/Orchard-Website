@@ -112,10 +112,6 @@ export function Showcase() {
                 No web wrappers or Electron bloat. Orchard is written in native Swift 6 for unmatched memory efficiency, battery life, and instantaneous offline responsiveness.
               </p>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#EAE5E2] dark:bg-[#481C0C] px-4 py-2 text-xs font-semibold text-[#290B00] dark:text-[#F6F4F3] border border-[#290B00]/10 dark:border-[#F6F4F3]/15">
-              <ShieldCheck className="size-4 text-[#290B00] dark:text-[#F6F4F3]" aria-hidden="true" />
-              100% Free & Open Source (FOSS)
-            </div>
           </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
