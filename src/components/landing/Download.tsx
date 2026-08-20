@@ -140,7 +140,7 @@ export function SiteFooter() {
 
         <nav className="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-medium">
 
-          <a href="/#features" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
+          <a href="/features" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">
             Features
           </a>
           <a href="/#how" className="transition-colors hover:text-[#290B00] dark:hover:text-[#F6F4F3]">

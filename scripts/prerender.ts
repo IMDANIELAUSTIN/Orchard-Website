@@ -3,6 +3,7 @@ import { dirname } from "path";
 
 const routes = [
   "/",
+  "/features",
   "/pricing",
   "/faq",
   "/blog",
