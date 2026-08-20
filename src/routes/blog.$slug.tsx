@@ -24,9 +24,17 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
+        { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
+        { property: "og:image:width", content: "1024" },
+        { property: "og:image:height", content: "537" },
+        { property: "og:image:type", content: "image/jpeg" },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
       ],
-      links: [{ rel: "canonical", href: url }],
+      links: [
+        { rel: "canonical", href: url },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+      ],
       scripts: [
         {
           type: "application/ld+json",

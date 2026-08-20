@@ -42,9 +42,17 @@ export const Route = createFileRoute("/faq")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://orchard-website.lovable.app/faq" },
+      { property: "og:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
+      { property: "og:image:width", content: "1024" },
+      { property: "og:image:height", content: "537" },
+      { property: "og:image:type", content: "image/jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
     ],
-    links: [{ rel: "canonical", href: "https://orchard-website.lovable.app/faq" }],
+    links: [
+      { rel: "canonical", href: "https://orchard-website.lovable.app/faq" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+    ],
     scripts: [
       {
         type: "application/ld+json",

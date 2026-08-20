@@ -84,8 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Orchard is an open-source, off-grid-first multimedia knowledge hub, P2P mesh network, local resilience exchange, and open-educational super-app.",
       },
-      { name: "author", content: "Orchard Project" },
-      { property: "og:site_name", content: "Orchard Project" },
+      { name: "author", content: "Daniel Austin" },
+      { property: "og:site_name", content: "Orchard" },
       { property: "og:title", content: "Orchard — Resilient Knowledge & Mesh Network for Everyone" },
       {
         property: "og:description",
@@ -93,7 +93,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Peer-to-peer mesh communications, massive offline educational libraries, local mutual-aid food markets, and decentralized social feeds.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://orchard-website.lovable.app/" },
+      { property: "og:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
+      { property: "og:image:width", content: "1024" },
+      { property: "og:image:height", content: "537" },
+      { property: "og:image:type", content: "image/jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
 
     ],
     links: [
