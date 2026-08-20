@@ -204,14 +204,58 @@
     border-color: var(--color-border);
   }
 
+  /*
+   * Typography Tracking System:
+   * - Typography <= 48px: +2% (0.02em) letter-spacing in light mode
+   * - Typography <= 48px: +4% (0.04em) letter-spacing in dark mode
+   */
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    letter-spacing: -0.015em;
+    letter-spacing: 0.02em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body,
+  .dark {
+    letter-spacing: 0.04em;
+  }
+
+  /* All typography tags and sizing <= 48px (text-xs through text-5xl) */
+  p, span, a, button, input, label, textarea, select, li, td, th, blockquote, dt, dd,
+  h1, h2, h3, h4, h5, h6,
+  .text-xs, .text-sm, .text-base, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl {
+    letter-spacing: 0.02em;
+  }
+
+  .dark p, .dark span, .dark a, .dark button, .dark input, .dark label, .dark textarea, .dark select,
+  .dark li, .dark td, .dark th, .dark blockquote, .dark dt, .dark dd,
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+  .dark .text-xs, .dark .text-sm, .dark .text-base, .dark .text-lg, .dark .text-xl, .dark .text-2xl, .dark .text-3xl, .dark .text-4xl, .dark .text-5xl {
+    letter-spacing: 0.04em;
+  }
+
+  /* Override tracking-tight on sub-48px typography */
+  .tracking-tight {
+    letter-spacing: 0.02em;
+  }
+
+  .dark .tracking-tight {
+    letter-spacing: 0.04em;
+  }
+
+  /* Large display headlines > 48px retain tighter optical tracking */
+  .text-6xl, .text-7xl, .text-8xl, .text-9xl,
+  .text-6xl.tracking-tight, .text-7xl.tracking-tight, .text-8xl.tracking-tight, .text-9xl.tracking-tight {
+    letter-spacing: -0.025em;
+  }
+
+  .dark .text-6xl, .dark .text-7xl, .dark .text-8xl, .dark .text-9xl,
+  .dark .text-6xl.tracking-tight, .dark .text-7xl.tracking-tight, .dark .text-8xl.tracking-tight, .dark .text-9xl.tracking-tight {
+    letter-spacing: -0.015em;
   }
 }
 
