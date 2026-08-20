@@ -77,7 +77,7 @@ const categories = [
   "All",
   "General & Philosophy",
   "Offline Knowledge",
-  "Mesh Radio & Chat",
+  "Infrastructure & Networking",
   "Local Provisions & Mutual Aid",
   "Fediverse & Open Social",
   "Sponsors and Future Products",
@@ -151,45 +151,45 @@ const allFaqs: FaqItem[] = [
       "Orchard features a native Lossless Spatial Audio player that synchronizes time-coded instructional transcripts with recorded audio lectures. You can listen with head-tracking on AirPods, read along with real-time word highlighting, or switch between video and audio modes to conserve device battery during off-grid use.",
   },
 
-  // Mesh Radio & Chat
+  // Infrastructure & Networking
   {
     id: "mesh-1",
-    category: "Mesh Radio & Chat",
+    category: "Infrastructure & Networking",
     question: "How does peer-to-peer mesh messaging work in an emergency?",
     answer:
       "When cellular base stations fail, Orchard automatically switches to local peer-to-peer radio transport. Devices within range connect directly via Bluetooth Low Energy (BLE). For multi-mile reach, Orchard connects to portable Long Range (LoRa) packet radio transceivers, hopping encrypted messages across nodes until reaching the destination.",
   },
   {
     id: "mesh-2",
-    category: "Mesh Radio & Chat",
+    category: "Infrastructure & Networking",
     question: "How are messages encrypted across the radio mesh?",
     answer:
       "Every direct and group dispatch is cryptographically secured with the Signal Protocol Double Ratchet algorithm using secp256k1 keys. Intermediate mesh nodes forward encrypted packets without ever having access to message plaintext or sender identity.",
   },
   {
     id: "mesh-3",
-    category: "Mesh Radio & Chat",
+    category: "Infrastructure & Networking",
     question: "What external hardware do I need for LoRa packet radio?",
     answer:
       "For close-range mesh (around your home, office, or neighborhood block), zero external hardware is required—Orchard uses your device's built-in Bluetooth Low Energy. For long-range radio spanning 1 to 10+ miles, Orchard pairs wirelessly with any standard Meshtastic-compatible LoRa radio (such as Heltec V3, LilyGO T-Beam, or RAK Wireless nodes).",
   },
   {
     id: "mesh-4",
-    category: "Mesh Radio & Chat",
+    category: "Infrastructure & Networking",
     question: "Can I receive emergency alerts on my Apple Watch?",
     answer:
       "Yes. Orchard's watchOS app receives critical broadcast alerts, displays offline emergency survival cards, and allows quick status replies directly from your wrist while your iPhone remains safely stored in a waterproof pack.",
   },
   {
     id: "mesh-5",
-    category: "Mesh Radio & Chat",
+    category: "Infrastructure & Networking",
     question: "Where can I find hardware assembly blueprints and solar repeater guides?",
     answer:
       "Complete 3D-printable enclosure models, solar panel wiring diagrams, and battery power management blueprints for standalone hilltop repeater stations are published in our open GitHub documentation repository.",
   },
   {
     id: "mesh-6",
-    category: "Mesh Radio & Chat",
+    category: "Infrastructure & Networking",
     question: "Can schools, clinics, and rural libraries deploy Orchard in bulk?",
     answer:
       "Yes! Because Orchard is open source, educators and organizers can deploy Orchard across classroom sets of iPads or Macs without licensing fees, per-seat subscriptions, or internet provisioning requirements.",
