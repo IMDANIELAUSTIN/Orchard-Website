@@ -3,6 +3,7 @@ import { Trees, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const links = [
+    { label: "Home", href: "/" },
   { label: "Features", href: "/#features" },
   { label: "Benefits", href: "/#how" },
   { label: "Support", href: "/pricing" },
