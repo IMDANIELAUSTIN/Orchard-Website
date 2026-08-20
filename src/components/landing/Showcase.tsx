@@ -69,11 +69,11 @@ export function Showcase() {
               return (
                 <div
                   key={block.title}
-                  className={`reveal delay-${idx + 1} relative flex flex-col justify-between rounded-[28px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
+                  className={`reveal delay-${idx + 1} relative flex flex-col justify-between rounded-[36px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-[#EAE5E2] dark:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] font-bold text-sm">
+                      <span className="inline-flex size-10 items-center justify-center rounded-[18px] bg-[#EAE5E2] dark:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] font-bold text-sm">
                         {block.step}
                       </span>
                       <Icon className="size-5 text-[#290B00]/60 dark:text-[#F6F4F3]/60" aria-hidden="true" />
@@ -98,7 +98,7 @@ export function Showcase() {
         </div>
 
         {/* Technical Specs & Integrity Box */}
-        <div id="specs" className="reveal delay-2 mt-24 rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-12 shadow-card">
+        <div id="specs" className="reveal delay-2 mt-24 rounded-[40px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-12 shadow-card">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pb-8 border-b border-[#290B00]/10 dark:border-[#F6F4F3]/15">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#290B00] dark:text-[#F6F4F3] uppercase tracking-wider">

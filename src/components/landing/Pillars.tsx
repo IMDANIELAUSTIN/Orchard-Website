@@ -74,7 +74,7 @@ export function Pillars() {
             return (
               <div
                 key={pillar.id}
-                className={`reveal delay-${idx + 1} group relative flex flex-col justify-between overflow-hidden rounded-[28px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-10 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
+                className={`reveal delay-${idx + 1} group relative flex flex-col justify-between overflow-hidden rounded-[36px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-10 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
               >
                 <div className="relative z-10">
                   <div className="flex items-center justify-between gap-4">

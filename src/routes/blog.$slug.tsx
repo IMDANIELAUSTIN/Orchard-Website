@@ -52,7 +52,7 @@ function PostNotFound() {
     <div className="min-h-screen bg-[#F6F4F3] dark:bg-[#290B00] text-[#290B00] dark:text-[#F6F4F3]">
       <SiteHeader />
       <main className="mx-auto max-w-2xl px-6 py-32 text-center">
-        <div className="rounded-[28px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-12 shadow-card">
+        <div className="rounded-[36px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-12 shadow-card">
           <h1 className="text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">Post not found</h1>
           <p className="mt-4 text-[#290B00]/70 dark:text-[#F6F4F3]/70">That article does not exist or has been moved.</p>
           <Link to="/blog" className="mt-8 inline-block font-semibold text-[#290B00] dark:text-[#F6F4F3] hover:underline">
@@ -80,7 +80,7 @@ function PostPage() {
           All posts
         </Link>
 
-        <article className="mt-8 rounded-[28px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-12 shadow-card">
+        <article className="mt-8 rounded-[36px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-12 shadow-card">
           <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-[#290B00] dark:text-[#F6F4F3]">
             {post.title}
           </h1>

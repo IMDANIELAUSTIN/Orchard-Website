@@ -237,7 +237,7 @@ function PricingPage() {
             {tiers.map((tier, idx) => (
               <div
                 key={tier.name}
-                className={`reveal delay-${idx + 1} flex flex-col rounded-[28px] border bg-[#F6F4F3] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 ${
+                className={`reveal delay-${idx + 1} flex flex-col rounded-[36px] border bg-[#F6F4F3] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 ${
                   tier.featured
                     ? "border-[#290B00] dark:border-[#F6F4F3] ring-2 ring-[#290B00]/20 dark:ring-[#F6F4F3]/20 relative lg:-translate-y-4 shadow-xl"
                     : "border-[#290B00]/10 dark:border-[#F6F4F3]/15 hover:shadow-xl hover:-translate-y-1"
@@ -303,7 +303,7 @@ function PricingPage() {
 
         {/* Public Goods Commitment Banner */}
         <section className="mx-auto mt-24 max-w-6xl px-6">
-          <div className="reveal delay-2 rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-12 shadow-card">
+          <div className="reveal delay-2 rounded-[40px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-12 shadow-card">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
               <div className="max-w-2xl">
                 <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#290B00] dark:text-[#F6F4F3] uppercase tracking-wider">
@@ -320,15 +320,15 @@ function PricingPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] p-4 text-center">
+                <div className="rounded-[22px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] p-4 text-center">
                   <div className="text-2xl font-extrabold text-[#290B00] dark:text-[#F6F4F3]">100%</div>
                   <div className="mt-1 text-xs text-[#290B00]/70 dark:text-[#F6F4F3]/70">Free & Open Source</div>
                 </div>
-                <div className="rounded-2xl border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] p-4 text-center">
+                <div className="rounded-[22px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] p-4 text-center">
                   <div className="text-2xl font-extrabold text-[#290B00] dark:text-[#F6F4F3]">0</div>
                   <div className="mt-1 text-xs text-[#290B00]/70 dark:text-[#F6F4F3]/70">Tracking scripts</div>
                 </div>
-                <div className="col-span-2 sm:col-span-1 rounded-2xl border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] p-4 text-center">
+                <div className="col-span-2 sm:col-span-1 rounded-[22px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] p-4 text-center">
                   <div className="text-2xl font-extrabold text-[#290B00] dark:text-[#F6F4F3]">Offline</div>
                   <div className="mt-1 text-xs text-[#290B00]/70 dark:text-[#F6F4F3]/70">By default</div>
                 </div>
@@ -348,7 +348,7 @@ function PricingPage() {
             </p>
           </div>
 
-          <div className="reveal delay-1 mt-12 overflow-x-auto rounded-[24px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] shadow-card">
+          <div className="reveal delay-1 mt-12 overflow-x-auto rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] shadow-card">
             <table className="w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C]">
@@ -362,7 +362,7 @@ function PricingPage() {
                 {featureComparison.map((section) => (
                   <tr key={section.category} className="contents">
                     <td
-                      colSpan={4}
+                       colSpan={4}
                       className="bg-[#EAE5E2]/60 dark:bg-[#481C0C]/60 px-5 py-3 text-xs font-bold uppercase tracking-wider text-[#290B00]/60 dark:text-[#F6F4F3]/60"
                     >
                       {section.category}
@@ -417,7 +417,7 @@ function PricingPage() {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="rounded-2xl border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] px-6 py-2 shadow-card"
+                  className="rounded-[22px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] px-6 py-2 shadow-card"
                 >
                   <AccordionTrigger className="text-base font-bold text-[#290B00] dark:text-[#F6F4F3] hover:no-underline">
                     {faq.question}
@@ -433,7 +433,7 @@ function PricingPage() {
 
         {/* Download CTA */}
         <section className="reveal delay-2 mx-auto mt-28 max-w-5xl px-6 text-center">
-          <div className="rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-10 sm:p-16 shadow-card">
+          <div className="rounded-[40px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-10 sm:p-16 shadow-card">
             <h2 className="text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3] sm:text-4xl">
               Carry human knowledge and mesh power everywhere
             </h2>

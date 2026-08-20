@@ -65,13 +65,14 @@ export function Hero() {
         </div>
 
         <div className="reveal delay-5 mt-12">
-          <div className="mx-auto w-full max-w-4xl rounded-[32px] bg-[#F6F4F3] dark:bg-[#381406] p-3 sm:p-4 shadow-card border border-[#290B00]/10 dark:border-[#F6F4F3]/15">
+          <div className="mx-auto w-full max-w-4xl rounded-[40px] bg-[#F6F4F3] dark:bg-[#381406] p-3 sm:p-4 shadow-card border border-[#290B00]/10 dark:border-[#F6F4F3]/15">
             <img
-              src={appPreview}
-              alt="Orchard off-grid knowledge hub, 3D connection map, and mesh chat app shown on devices"
-              width={1200}
-              height={912}
-              className="w-full rounded-[24px] object-cover"
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
+              alt="Orchard off-grid device interface and mesh network preview"
+              width={1600}
+              height={900}
+              loading="eager"
+              className="w-full rounded-[32px] object-cover"
             />
           </div>
         </div>

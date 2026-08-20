@@ -36,7 +36,7 @@ export function BlogSection() {
           {featured.map((post, idx) => (
             <article
               key={post.slug}
-              className={`reveal delay-${idx + 1} flex flex-col justify-between rounded-[24px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-7 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
+              className={`reveal delay-${idx + 1} flex flex-col justify-between rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-7 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
             >
               <div>
                 <h3 className="text-lg font-bold leading-snug text-[#290B00] dark:text-[#F6F4F3]">

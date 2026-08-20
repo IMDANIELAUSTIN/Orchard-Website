@@ -86,7 +86,7 @@ function AuthPage() {
     <div className="flex min-h-screen flex-col bg-[#F6F4F3] dark:bg-[#290B00] text-[#290B00] dark:text-[#F6F4F3]">
       <SiteHeader />
       <main className="flex flex-1 items-center justify-center px-6 py-20">
-        <div className="w-full max-w-sm rounded-[28px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-10 shadow-card">
+        <div className="w-full max-w-sm rounded-[36px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-10 shadow-card">
           <h1 className="text-2xl font-bold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">
             {mode === "signin" ? "Admin sign in" : "Create admin account"}
           </h1>

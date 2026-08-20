@@ -56,7 +56,7 @@ function BlogIndex() {
 
         <ul className="mt-10 space-y-6">
           {sortedPosts.map((post, idx) => (
-            <li key={post.slug} className={`reveal delay-${idx + 1} rounded-[24px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}>
+            <li key={post.slug} className={`reveal delay-${idx + 1} rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}>
               <h2 className="text-2xl font-bold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">
                 <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:text-[#5C230C] dark:hover:text-[#DFCFC9] transition-colors">
                   {post.title}

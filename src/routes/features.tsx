@@ -321,7 +321,7 @@ function FeaturesPage() {
               <section
                 key={pillar.id}
                 id={pillar.id}
-                className="reveal scroll-mt-28 rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-12 shadow-card"
+                className="reveal scroll-mt-28 rounded-[40px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-8 sm:p-12 shadow-card"
               >
                 {/* Header */}
                 <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#290B00]/10 dark:border-[#F6F4F3]/10">
@@ -349,7 +349,7 @@ function FeaturesPage() {
                   {pillar.capabilities.map((cap) => (
                     <div
                       key={cap.name}
-                      className="rounded-2xl border border-[#290B00]/10 dark:border-[#F6F4F3]/10 bg-[#EAE5E2] dark:bg-[#481C0C] p-5 transition-colors"
+                      className="rounded-[22px] border border-[#290B00]/10 dark:border-[#F6F4F3]/10 bg-[#EAE5E2] dark:bg-[#481C0C] p-5 transition-colors"
                     >
                       <h3 className="flex items-center gap-2 text-sm font-bold text-[#290B00] dark:text-[#F6F4F3]">
                         <CheckCircle2 className="size-4 shrink-0 text-[#290B00] dark:text-[#F6F4F3]" aria-hidden="true" />
@@ -373,7 +373,7 @@ function FeaturesPage() {
           {/* Technical Specifications Matrix Section */}
           <section
             id="specs"
-            className="reveal scroll-mt-28 rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#381406] p-8 sm:p-12 shadow-card"
+            className="reveal scroll-mt-28 rounded-[40px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#381406] p-8 sm:p-12 shadow-card"
           >
             <div className="flex items-center gap-3 pb-6 border-b border-[#290B00]/10 dark:border-[#F6F4F3]/10">
               <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-[#290B00] dark:bg-[#F6F4F3] text-[#F6F4F3] dark:text-[#290B00] shadow-sm">
@@ -389,7 +389,7 @@ function FeaturesPage() {
               </div>
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-2xl border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#290B00]">
+            <div className="mt-8 overflow-hidden rounded-[22px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#290B00]">
               <table className="w-full text-left text-sm">
                 <tbody className="divide-y divide-[#290B00]/10 dark:divide-[#F6F4F3]/15">
                   {technicalSpecs.map((row) => (
@@ -408,7 +408,7 @@ function FeaturesPage() {
           </section>
 
           {/* Bottom Download CTA */}
-          <section className="reveal text-center rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-10 sm:p-16 shadow-card">
+          <section className="reveal text-center rounded-[40px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-10 sm:p-16 shadow-card">
             <h2 className="text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3] sm:text-4xl">
               Experience the complete Orchard super-app
             </h2>

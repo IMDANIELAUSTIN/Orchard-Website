@@ -43,7 +43,7 @@ export function Community() {
           {quotes.map((item, idx) => (
             <figure
               key={item.name}
-              className={`reveal delay-${idx + 1} flex flex-col justify-between rounded-[24px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 hover:bg-[#F6F4F3] dark:hover:bg-[#481C0C] hover:shadow-xl hover:-translate-y-1`}
+              className={`reveal delay-${idx + 1} flex flex-col justify-between rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#381406] p-8 shadow-card transition-all duration-300 hover:bg-[#F6F4F3] dark:hover:bg-[#481C0C] hover:shadow-xl hover:-translate-y-1`}
             >
               <blockquote className="text-base leading-relaxed text-[#290B00] dark:text-[#F6F4F3]">
                 &ldquo;{item.quote}&rdquo;

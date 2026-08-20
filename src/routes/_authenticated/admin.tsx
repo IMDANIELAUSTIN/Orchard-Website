@@ -129,7 +129,7 @@ function AdminPage() {
               />
             </div>
 
-            <div className="mt-6 overflow-hidden rounded-[24px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] shadow-card">
+            <div className="mt-6 overflow-hidden rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] shadow-card">
               <table className="w-full text-left text-sm">
                 <thead className="bg-[#EAE5E2] dark:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] font-bold">
                   <tr>

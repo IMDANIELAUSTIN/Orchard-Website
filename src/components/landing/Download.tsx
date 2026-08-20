@@ -42,7 +42,7 @@ export function Download() {
     <section id="download" className="border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-24 bg-[#EAE5E2] dark:bg-[#1E0700]">
       <div className="mx-auto max-w-5xl px-6">
         {/* Main CTA banner */}
-        <div className="reveal rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-10 sm:p-16 text-center shadow-card">
+        <div className="reveal rounded-[40px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-10 sm:p-16 text-center shadow-card">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#290B00] dark:text-[#F6F4F3] shadow-sm">
             <Sparkles className="size-3.5" aria-hidden="true" />
             100% Free & Open Source

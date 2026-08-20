@@ -385,7 +385,7 @@ function FaqPage() {
                   <AccordionItem
                     key={faq.id}
                     value={faq.id}
-                    className="reveal rounded-[24px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] px-6 sm:px-8 py-2 shadow-card transition-all"
+                    className="reveal rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] px-6 sm:px-8 py-2 shadow-card transition-all"
                   >
                     <AccordionTrigger className="text-left text-base sm:text-lg font-bold text-[#290B00] dark:text-[#F6F4F3] hover:no-underline py-4">
                       <span className="flex items-center gap-3">
@@ -404,7 +404,7 @@ function FaqPage() {
                 ))}
               </Accordion>
             ) : (
-              <div className="rounded-[28px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-12 text-center">
+              <div className="rounded-[36px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-12 text-center">
                 <HelpCircle className="mx-auto size-8 text-[#290B00]/40 dark:text-[#F6F4F3]/40" />
                 <h3 className="mt-4 text-lg font-bold text-[#290B00] dark:text-[#F6F4F3]">
                   No matching questions found
@@ -430,7 +430,7 @@ function FaqPage() {
 
         {/* Still have questions banner */}
         <section className="reveal mx-auto mt-24 max-w-5xl px-6">
-          <div className="rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#381406] p-8 sm:p-12 shadow-card">
+          <div className="rounded-[40px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#381406] p-8 sm:p-12 shadow-card">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div>
                 <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#290B00] dark:text-[#F6F4F3] uppercase tracking-wider">
