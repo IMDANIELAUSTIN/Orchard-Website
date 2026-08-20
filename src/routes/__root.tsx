@@ -133,6 +133,14 @@ function RootShell({ children }: { children: ReactNode }) {
                   } else {
                     document.documentElement.classList.remove('dark');
                   }
+
+                  // Detect Apple device + Safari browser
+                  var ua = navigator.userAgent;
+                  var isApple = /Macintosh|iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+                  var isSafari = /^((?!chrome|android|crios|fxios).)*safari/i.test(ua);
+                  if (isApple && isSafari) {
+                    document.documentElement.classList.add('is-apple-safari');
+                  }
                 } catch (e) {}
               })();
             `,

@@ -12,6 +12,7 @@
 
 @theme inline {
   --font-sans: "Helvetica Now Text", "Helvetica Now Display", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "New York", -apple-system-ui-serif, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -57,6 +58,8 @@
 }
 
 :root {
+  --font-sans: "Helvetica Now Text", "Helvetica Now Display", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "New York", -apple-system-ui-serif, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --radius: 1rem;
   /* Light Cream canvas */
   --background: #F6F4F3;
@@ -209,5 +212,35 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/*
+ * Apple Device + Safari Typography System:
+ * - Sans-Serif: Apple San Francisco (-apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro")
+ * - Serif: Apple New York ("New York", -apple-system-ui-serif, ui-serif)
+ */
+html.is-apple-safari,
+html.is-apple-safari body {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", system-ui, sans-serif;
+  --font-serif: "New York", -apple-system-ui-serif, ui-serif, Georgia, serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", system-ui, sans-serif;
+}
+
+@supports (-webkit-hyphens: none) and (not (-webkit-touch-callout: none)) {
+  /* Safari macOS */
+  :root, body {
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", system-ui, sans-serif;
+    --font-serif: "New York", -apple-system-ui-serif, ui-serif, Georgia, serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", system-ui, sans-serif;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* Safari iOS / iPadOS */
+  :root, body {
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", system-ui, sans-serif;
+    --font-serif: "New York", -apple-system-ui-serif, ui-serif, Georgia, serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", system-ui, sans-serif;
   }
 }
