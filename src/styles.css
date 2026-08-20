@@ -205,18 +205,47 @@
   }
 
   /*
-   * Typography Tracking System:
+   * Typography Tracking & Flow System:
    * - Typography <= 48px: +2% (0.02em) letter-spacing in light mode
    * - Typography <= 48px: +4% (0.04em) letter-spacing in dark mode
+   * - Non-breaking words: words stay intact (word-break: normal, hyphens: none)
+   * - No typographic orphans/widows on paragraphs: text-wrap: pretty, orphans: 3, widows: 3
+   * - Balanced headings without single dangling words: text-wrap: balance
    */
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     letter-spacing: 0.02em;
+    text-wrap: pretty;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
+    orphans: 3;
+    widows: 3;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Paragraphs and body text: no orphans, no widows, clean line balancing */
+  p, li, blockquote, dd, td, th {
+    text-wrap: pretty;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Headings: balanced multi-line layout without single dangling words */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
+    orphans: 3;
+    widows: 3;
   }
 
   .dark body,
