@@ -91,7 +91,7 @@ export function SiteHeader() {
             >
               <a href="/#download">
                 <Download className="mr-1.5 size-3.5" aria-hidden="true" />
-                Get Orchard
+                Download the Orchard App
               </a>
             </Button>
           </div>
