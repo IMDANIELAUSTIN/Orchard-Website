@@ -7,13 +7,13 @@ export function BlogSection() {
   const featured = sortedPosts.slice(0, 3);
 
   return (
-    <section id="blog" className="border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-24 bg-[#EAE5E2] dark:bg-[#1E0700]">
+    <section id="newsroom" className="border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-24 bg-[#EAE5E2] dark:bg-[#1E0700]">
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="text-sm font-semibold text-[#290B00] dark:text-[#F6F4F3] uppercase tracking-wider">Field Notes & Dispatches</p>
+            <p className="text-sm font-semibold text-[#290B00] dark:text-[#F6F4F3] uppercase tracking-wider">Official Announcements</p>
             <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3] sm:text-4xl">
-              Notes on mesh networks, offline knowledge & mutual aid
+              Latest product updates & service dispatches
             </h2>
           </div>
           <div className="flex gap-3">
@@ -25,7 +25,7 @@ export function BlogSection() {
             </Button>
             <Button variant="secondary" className="rounded-full bg-[#EAE5E2] hover:bg-[#DDD6D2] text-[#290B00] dark:bg-[#381406] dark:hover:bg-[#481C0C] dark:text-[#F6F4F3] border border-[#290B00]/5 dark:border-[#F6F4F3]/10" asChild>
               <Link to="/blog">
-                All posts
+                Newsroom
                 <ArrowRight className="size-4 aria-hidden=true" />
               </Link>
             </Button>
@@ -39,7 +39,12 @@ export function BlogSection() {
               className={`reveal delay-${idx + 1} flex flex-col justify-between rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-7 shadow-card transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
             >
               <div>
-                <h3 className="text-lg font-bold leading-snug text-[#290B00] dark:text-[#F6F4F3]">
+                <div className="flex items-center gap-2">
+                  <span className="rounded-full bg-[#EAE5E2] dark:bg-[#481C0C] px-2.5 py-0.5 text-[11px] font-bold text-[#290B00] dark:text-[#F6F4F3]">
+                    {post.category}
+                  </span>
+                </div>
+                <h3 className="mt-3 text-lg font-bold leading-snug text-[#290B00] dark:text-[#F6F4F3]">
                   <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:text-[#5C230C] dark:hover:text-[#DFCFC9] transition-colors">
                     {post.title}
                   </Link>

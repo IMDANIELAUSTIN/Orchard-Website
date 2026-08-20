@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Orchard Blog</title>
+    <title>Orchard Newsroom</title>
     <link>https://orchard-website.lovable.app/blog</link>
-    <description>Notes on decentralized mesh networks, offline super-libraries, mutual aid, and Fediverse protocols from the Orchard team.</description>
+    <description>Official product releases, service announcements, and platform updates from the Orchard project.</description>
     <language>en-us</language>
     <atom:link href="https://orchard-website.lovable.app/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building Resilience: Why Offline-First Software is the Future of Human Knowledge</title>
+      <title>Orchard Release: Embedded Kiwix Knowledge Engine and Medical Reference Architecture</title>
       <link>https://orchard-website.lovable.app/blog/offline-first-human-knowledge</link>
       <guid isPermaLink="true">https://orchard-website.lovable.app/blog/offline-first-human-knowledge</guid>
       <description>When internet connectivity cuts out, access to critical medical guides, encyclopedias, and educational courses shouldn't vanish. Here is how Orchard stores human knowledge on-device.</description>
-      <author>noreply@orchard-website.lovable.app (Elena Rostova)</author>
+      <author>hello@imdanielaustin.com (Daniel Austin)</author>
       <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>How LoRa and Bluetooth Mesh Keep Communities Connected When the Grid Goes Down</title>
+      <title>Service Announcement: Long-Range LoRa Mesh and Bluetooth Bridge Integration</title>
       <link>https://orchard-website.lovable.app/blog/mesh-networking-lora-bluetooth</link>
       <guid isPermaLink="true">https://orchard-website.lovable.app/blog/mesh-networking-lora-bluetooth</guid>
       <description>Cell towers fail. Decentralized peer-to-peer radio meshes don't. Learn how Orchard combines Signal Double Ratchet encryption with packet radio and BLE.</description>
-      <author>noreply@orchard-website.lovable.app (Tariq Vance)</author>
+      <author>hello@imdanielaustin.com (Daniel Austin)</author>
       <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Unifying the Fediverse: Mastodon, Bluesky, Lemmy, and Nostr in One Stream</title>
+      <title>Product Update: Unified Fediverse and Decentralized Social Hub Released</title>
       <link>https://orchard-website.lovable.app/blog/unifying-fediverse-mastodon-bluesky</link>
       <guid isPermaLink="true">https://orchard-website.lovable.app/blog/unifying-fediverse-mastodon-bluesky</guid>
       <description>Stop fragmenting your social experience across incompatible silos. Orchard unifies decentralized protocols into 16 categorized, chronological channels.</description>
-      <author>noreply@orchard-website.lovable.app (Siddharth Nair)</author>
+      <author>hello@imdanielaustin.com (Daniel Austin)</author>
       <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>The 21-Category Local Exchange: Mapping Food Forests and Mutual Aid Networks</title>
+      <title>Service Milestone: 21-Category Mutual Aid Directory and Offline Vector Globe</title>
       <link>https://orchard-website.lovable.app/blog/local-resilience-exchanges-mutual-aid</link>
       <guid isPermaLink="true">https://orchard-website.lovable.app/blog/local-resilience-exchanges-mutual-aid</guid>
       <description>True community security starts with knowing where local provisions, clean water, seed banks, and tool libraries exist. Here's how Orchard's 3D connection map works offline.</description>
-      <author>noreply@orchard-website.lovable.app (Elena Rostova)</author>
+      <author>hello@imdanielaustin.com (Daniel Austin)</author>
       <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
     </item>
   </channel>

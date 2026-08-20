@@ -105,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "alternate",
         type: "application/rss+xml",
-        title: "Orchard Blog RSS",
+        title: "Orchard Newsroom RSS",
         href: "https://orchard-website.lovable.app/rss.xml",
       },
     ],

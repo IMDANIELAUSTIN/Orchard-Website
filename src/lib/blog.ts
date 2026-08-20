@@ -2,6 +2,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
+  category: "Product Update" | "Service Announcement" | "Hardware Release";
   author: string;
   date: string; // ISO date
   readingTime: string;
@@ -13,10 +14,11 @@ export const SITE_URL = "https://orchard-website.lovable.app";
 export const posts: BlogPost[] = [
   {
     slug: "offline-first-human-knowledge",
-    title: "Building Resilience: Why Offline-First Software is the Future of Human Knowledge",
+    title: "Orchard Release: Embedded Kiwix Knowledge Engine and Medical Reference Architecture",
     excerpt:
       "When internet connectivity cuts out, access to critical medical guides, encyclopedias, and educational courses shouldn't vanish. Here is how Orchard stores human knowledge on-device.",
-    author: "Elena Rostova",
+    category: "Product Update",
+    author: "Daniel Austin",
     date: "2026-08-12",
     readingTime: "6 min read",
     body: [
@@ -27,10 +29,11 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "mesh-networking-lora-bluetooth",
-    title: "How LoRa and Bluetooth Mesh Keep Communities Connected When the Grid Goes Down",
+    title: "Service Announcement: Long-Range LoRa Mesh and Bluetooth Bridge Integration",
     excerpt:
       "Cell towers fail. Decentralized peer-to-peer radio meshes don't. Learn how Orchard combines Signal Double Ratchet encryption with packet radio and BLE.",
-    author: "Tariq Vance",
+    category: "Service Announcement",
+    author: "Daniel Austin",
     date: "2026-07-28",
     readingTime: "7 min read",
     body: [
@@ -41,10 +44,11 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "unifying-fediverse-mastodon-bluesky",
-    title: "Unifying the Fediverse: Mastodon, Bluesky, Lemmy, and Nostr in One Stream",
+    title: "Product Update: Unified Fediverse and Decentralized Social Hub Released",
     excerpt:
       "Stop fragmenting your social experience across incompatible silos. Orchard unifies decentralized protocols into 16 categorized, chronological channels.",
-    author: "Siddharth Nair",
+    category: "Product Update",
+    author: "Daniel Austin",
     date: "2026-07-05",
     readingTime: "5 min read",
     body: [
@@ -55,21 +59,26 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "local-resilience-exchanges-mutual-aid",
-    title: "The 21-Category Local Exchange: Mapping Food Forests and Mutual Aid Networks",
+    title: "Service Milestone: 21-Category Mutual Aid Directory and Offline Vector Globe",
     excerpt:
       "True community security starts with knowing where local provisions, clean water, seed banks, and tool libraries exist. Here's how Orchard's 3D connection map works offline.",
-    author: "Elena Rostova",
+    category: "Service Announcement",
+    author: "Daniel Austin",
     date: "2026-06-18",
-    readingTime: "8 min read",
+    readingTime: "6 min read",
     body: [
-      "Mutual aid is most powerful when neighbors have clear, shared awareness of local resources. Orchard's Connection Map features a rich 3D globe and localized mapping across 21 provision categories—from food forests and farmers markets to clean spring water and repair clinics.",
-      "Everything is cached offline alongside national and regional passenger rail routes (Amtrak, commuter rail, and transit). Even without cellular service, you can locate emergency resources, plan multi-modal transit routes, and coordinate neighborhood seed exchanges.",
-      "By placing local abundance and community tools at the center of the app, Orchard transforms personal technology into a catalyst for neighborhood self-reliance and collective resilience.",
+      "Globalized supply chains are efficient until they aren't. In moments of crisis or economic dislocation, knowing how to reach local growers, water sources, and tool libraries is vital.",
+      "Orchard introduces a dedicated 21-category localized provision map. You can bookmark local resources—such as food forests, clean spring water, seed banks, solar charging points, and tool lending cooperatives—and share them peer-to-peer.",
+      "Everything is rendered using offline vector tiles with an interactive 3D connection globe. No reliance on third-party mapping APIs or centralized tracking.",
     ],
   },
 ];
 
-export function getPost(slug: string) {
+export const sortedPosts = [...posts].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
+
+export function getPost(slug: string): BlogPost | undefined {
   return posts.find((p) => p.slug === slug);
 }
 
