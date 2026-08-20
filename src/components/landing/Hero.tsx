@@ -1,5 +1,6 @@
-import { Apple, Monitor, Github, Radio, ShieldCheck, WifiOff, BookOpen } from "lucide-react";
+import { Monitor, Github, Radio, ShieldCheck, WifiOff, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AppleLogo } from "@/components/icons/AppleLogo";
 import { STORE_LINKS } from "@/lib/store-links";
 import appPreview from "@/assets/app-preview.jpg";
 
@@ -19,17 +20,20 @@ export function Hero() {
         </p>
 
         {/* Action Buttons — 32pt rhythm & 52pt touch target */}
-        <div id="hero-cta" className="reveal delay-3 mt-8 flex flex-wrap items-center justify-center gap-4">
+        <div id="hero-cta" className="reveal delay-3 mt-8 flex flex-col items-center justify-center gap-3">
           <Button
             size="lg"
             className="h-13 px-8 rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-semibold text-base shadow-lg shadow-[#290B00]/20 dark:shadow-[#F6F4F3]/10 transition-all hover:scale-[1.02] active:scale-[0.98] border border-transparent dark:border-[#F6F4F3]/20"
             asChild
           >
             <a href={STORE_LINKS.testflight} target="_blank" rel="noopener noreferrer">
-              <Apple className="size-5 mr-1" aria-hidden="true" />
-              Test Orchard on iOS Now
+              <AppleLogo className="size-4.5 mr-2 -translate-y-0.5" aria-hidden="true" />
+              Test Orchard Today on iOS
             </a>
           </Button>
+          <p className="text-xs text-[#290B00]/60 dark:text-[#F6F4F3]/60 font-medium">
+            Native SwiftUI App Made for Your Apple Devices.
+          </p>
         </div>
 
         <div className="reveal delay-5 mt-12">

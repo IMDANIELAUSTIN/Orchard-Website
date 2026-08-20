@@ -1,5 +1,6 @@
-import { Apple, Monitor, Watch, Github, Share2, Sparkles, HelpCircle } from "lucide-react";
+import { Monitor, Watch, Github, Share2, Sparkles, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AppleLogo } from "@/components/icons/AppleLogo";
 import { STORE_LINKS } from "@/lib/store-links";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import {
@@ -62,7 +63,7 @@ export function Download() {
               asChild
             >
               <a href={STORE_LINKS.testflight} target="_blank" rel="noopener noreferrer">
-                <Apple className="size-5 mr-1" aria-hidden="true" />
+                <AppleLogo className="size-4.5 mr-2 -translate-y-0.5" aria-hidden="true" />
                 Test Orchard Today on iOS
               </a>
             </Button>
