@@ -58,65 +58,78 @@ function AdminPage() {
   const handleExport = () => {
     const blob = new Blob([toCsv(filtered)], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `newsletter-subscribers-${new Date().toISOString().slice(0, 10)}.csv`;
-    link.click();
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `newsletter-subscribers-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
     URL.revokeObjectURL(url);
   };
 
   const handleSignOut = async () => {
-    await queryClient.cancelQueries();
-    queryClient.clear();
     await supabase.auth.signOut();
-    navigate({ to: "/auth", replace: true });
+    queryClient.clear();
+    navigate({ to: "/auth" });
   };
 
   return (
-    <div className="min-h-screen bg-[#F6F4F3] dark:bg-[#290B00] text-[#290B00] dark:text-[#F6F4F3]">
-      <header className="border-b border-[#290B00]/10 dark:border-[#F6F4F3]/10 bg-[#F6F4F3] dark:bg-[#381406]">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 py-6">
+    <div className="flex min-h-screen flex-col bg-[#F6F4F3] dark:bg-[#290B00] text-[#290B00] dark:text-[#F6F4F3]">
+      <main className="flex-1 mx-auto w-full max-w-5xl px-6 py-12">
+        <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-[#290B00]/10 dark:border-[#F6F4F3]/10">
           <div>
-            <h1 className="text-2xl font-bold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">Newsletter subscribers</h1>
-            <p className="text-xs font-medium text-[#290B00]/60 dark:text-[#F6F4F3]/60">
-              {isLoading ? "Loading…" : `${subscribers.length} total`}
+            <h1 className="text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3]">Newsletter subscribers</h1>
+            <p className="mt-1 text-sm text-[#290B00]/70 dark:text-[#F6F4F3]/70">
+              Export and manage your email list.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <Button variant="outline" size="sm" className="rounded-full border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] text-[#290B00] dark:text-[#F6F4F3] hover:bg-[#EAE5E2] dark:hover:bg-[#481C0C]" onClick={() => refetch()} disabled={isFetching}>
-              <RefreshCw className={`size-4 mr-1 ${isFetching ? "animate-spin" : ""}`} aria-hidden />
+          <div className="flex items-center gap-3">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => refetch()}
+              disabled={isFetching}
+              className="rounded-full border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] text-[#290B00] dark:text-[#F6F4F3] hover:bg-[#EAE5E2] dark:hover:bg-[#481C0C]"
+            >
+              <RefreshCw className={`size-4 mr-1.5 ${isFetching ? "animate-spin" : ""}`} aria-hidden="true" />
               Refresh
             </Button>
-            <Button size="sm" className="rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-medium shadow-sm border border-transparent dark:border-[#F6F4F3]/20" onClick={handleExport} disabled={filtered.length === 0}>
-              <Download className="size-4 mr-1" aria-hidden />
-              Export CSV
+            <Button
+              size="sm"
+              onClick={handleExport}
+              disabled={filtered.length === 0}
+              className="rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-semibold"
+            >
+              <Download className="size-4 mr-1.5" aria-hidden="true" />
+              Export CSV ({filtered.length})
             </Button>
-            <Button variant="ghost" size="sm" className="rounded-full text-[#290B00]/70 dark:text-[#F6F4F3]/70 hover:text-[#290B00] dark:hover:text-[#F6F4F3]" onClick={handleSignOut}>
-              <LogOut className="size-4 mr-1" aria-hidden />
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleSignOut}
+              className="rounded-full text-[#290B00]/70 dark:text-[#F6F4F3]/70 hover:text-[#290B00] dark:hover:text-[#F6F4F3]"
+            >
+              <LogOut className="size-4 mr-1.5" aria-hidden="true" />
               Sign out
             </Button>
           </div>
         </div>
-      </header>
 
-      <main className="mx-auto max-w-5xl px-6 py-8">
         {error ? (
-          <p className="text-sm text-destructive font-medium">Could not load subscribers. Try refreshing.</p>
-        ) : data && !data.isAdmin ? (
-          <p className="text-sm text-[#290B00]/70 dark:text-[#F6F4F3]/70">
-            Your account doesn't have admin access yet. Ask an existing admin to grant it.
-          </p>
+          <div className="mt-8 rounded-2xl border border-destructive/30 bg-destructive/10 p-6 text-sm text-destructive">
+            Failed to load subscribers: {error instanceof Error ? error.message : "Unknown error"}
+          </div>
         ) : (
           <>
-            <Input
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search by email"
-              className="mb-6 max-w-xs h-11 rounded-full border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] text-[#290B00] dark:text-[#F6F4F3] px-4"
-              aria-label="Search subscribers by email"
-            />
+            <div className="mt-8 max-w-sm">
+              <Input
+                type="search"
+                placeholder="Filter by email…"
+                value={search}
+                onChange={(event) => setSearch(event.target.value)}
+                className="h-11 rounded-xl border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] placeholder:text-[#290B00]/50 dark:placeholder:text-[#F6F4F3]/50 focus:bg-[#F6F4F3] dark:focus:bg-[#381406]"
+              />
+            </div>
 
-            <div className="overflow-x-auto rounded-2xl border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] shadow-card">
+            <div className="mt-6 overflow-hidden rounded-[24px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] shadow-card">
               <table className="w-full text-left text-sm">
                 <thead className="bg-[#EAE5E2] dark:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] font-bold">
                   <tr>
@@ -152,6 +165,7 @@ function AdminPage() {
           </>
         )}
       </main>
+      <SiteFooter />
     </div>
   );
 }

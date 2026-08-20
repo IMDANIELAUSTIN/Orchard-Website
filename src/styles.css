@@ -11,7 +11,7 @@
  */
 
 @theme inline {
-  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: "Helvetica Now Text", "Helvetica Now Display", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

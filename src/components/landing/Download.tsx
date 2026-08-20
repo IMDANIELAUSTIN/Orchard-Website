@@ -134,7 +134,7 @@ export function SiteFooter() {
         <div>
           <p className="font-bold text-[#290B00] dark:text-[#F6F4F3]">The Orchard App</p>
           <p className="text-xs text-[#290B00]/60 dark:text-[#F6F4F3]/60 mt-1">
-            © {new Date().getFullYear()} The Orchard Project.
+            Copyright © 2016-2026 Daniel Lee Austin. All rights reserved.
           </p>
         </div>
 
