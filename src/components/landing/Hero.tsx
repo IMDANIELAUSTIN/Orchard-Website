@@ -15,7 +15,7 @@ export function Hero() {
         <p className="reveal delay-2 mx-auto mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed text-[#290B00]/70 dark:text-[#F6F4F3]/70">
           A connectivity-agnostic tool that combines offline world knowledge, peer-to-peer mesh communication,
           local markets, and ad-free social media feeds. Built to keep communities informed, connected,
-          and self-reliant even when the grid goes down.
+          and self-reliant, if and when data networks are unavailable.
         </p>
 
         {/* Action Buttons — 32pt rhythm & 52pt touch target */}
@@ -31,10 +31,6 @@ export function Hero() {
             </a>
           </Button>
         </div>
-
-        <p className="reveal delay-3 mt-4 text-xs font-medium text-[#290B00]/60 dark:text-[#F6F4F3]/60">
-          Native SwiftUI App Made for Your Apple Devices.
-        </p>
 
         <div className="reveal delay-5 mt-12">
           <div className="mx-auto w-full max-w-4xl rounded-[40px] bg-[#F6F4F3] dark:bg-[#381406] p-3 sm:p-4 shadow-card border border-[#290B00]/10 dark:border-[#F6F4F3]/15">
