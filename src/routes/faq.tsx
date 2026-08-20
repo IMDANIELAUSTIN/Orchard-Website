@@ -475,37 +475,6 @@ function FaqPage() {
         </section>
 
         {/* Bottom CTA */}
-        <section className="reveal mx-auto mt-24 max-w-5xl px-6 text-center">
-          <div className="rounded-[32px] border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#F6F4F3] dark:bg-[#381406] p-10 sm:p-16 shadow-card">
-            <h2 className="text-3xl font-extrabold tracking-tight text-[#290B00] dark:text-[#F6F4F3] sm:text-4xl">
-              Carry human knowledge and mesh power everywhere
-            </h2>
-            <p className="mx-auto mt-4 max-w-lg text-[#290B00]/70 dark:text-[#F6F4F3]/70">
-              Free, open source, and available natively for iOS, iPadOS, macOS, and Apple Watch.
-            </p>
-
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <Button size="lg" className="h-13 px-8 rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-semibold shadow-sm border border-transparent dark:border-[#F6F4F3]/20" asChild>
-                <a href={STORE_LINKS.ios} target="_blank" rel="noopener noreferrer">
-                  <Apple className="size-5 mr-1" aria-hidden="true" />
-                  Download for iOS
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" className="h-13 px-7 rounded-full bg-[#EAE5E2] hover:bg-[#DDD6D2] text-[#290B00] dark:bg-[#481C0C] dark:hover:bg-[#56220E] dark:text-[#F6F4F3] font-semibold border border-[#290B00]/5 dark:border-[#F6F4F3]/10" asChild>
-                <a href={STORE_LINKS.macos} target="_blank" rel="noopener noreferrer">
-                  <Monitor className="size-5 mr-1" aria-hidden="true" />
-                  macOS & watchOS
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="h-13 px-7 rounded-full border border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] hover:bg-[#EAE5E2] dark:hover:bg-[#481C0C] text-[#290B00] dark:text-[#F6F4F3] font-semibold" asChild>
-                <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="size-5 mr-1" aria-hidden="true" />
-                  View on GitHub
-                </a>
-              </Button>
-            </div>
-          </div>
-        </section>
       </main>
 
       <SiteFooter />
