@@ -27,7 +27,7 @@ export function Hero() {
             asChild
           >
             <a href={STORE_LINKS.testflight} target="_blank" rel="noopener noreferrer">
-              <AppleLogo className="size-4.5 mr-2 -translate-y-0.5" aria-hidden="true" />
+              <AppleLogo className="size-5 mr-2" aria-hidden="true" />
               Test Orchard Today on iOS
             </a>
           </Button>

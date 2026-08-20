@@ -437,7 +437,7 @@ function FeaturesPage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Button size="lg" className="h-13 px-8 rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-semibold shadow-sm border border-transparent dark:border-[#F6F4F3]/20" asChild>
                 <a href={STORE_LINKS.ios} target="_blank" rel="noopener noreferrer">
-                  <AppleLogo className="size-4.5 mr-2 -translate-y-0.5" aria-hidden="true" />
+                  <AppleLogo className="size-5 mr-2" aria-hidden="true" />
                   Download for iOS
                 </a>
               </Button>
