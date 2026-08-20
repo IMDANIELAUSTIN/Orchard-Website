@@ -82,8 +82,6 @@ export function getPost(slug: string): BlogPost | undefined {
   return posts.find((p) => p.slug === slug);
 }
 
-export const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
-
 export function formatDate(iso: string) {
   return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", {
     year: "numeric",

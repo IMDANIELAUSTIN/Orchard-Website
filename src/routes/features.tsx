@@ -31,6 +31,7 @@ import { SiteHeader } from "@/components/landing/SiteHeader";
 import { SiteFooter } from "@/components/landing/Download";
 import { Button } from "@/components/ui/button";
 import { AppleLogo } from "@/components/icons/AppleLogo";
+import { FeatureGrid } from "@/components/landing/FeatureGrid";
 import { STORE_LINKS } from "@/lib/store-links";
 
 const title = "Features & Technical Architecture — Orchard Super-App";
@@ -295,6 +296,12 @@ function FeaturesPage() {
         {/* Feature Navigation Pills */}
         <section className="sticky top-14 z-40 bg-[#F6F4F3]/90 dark:bg-[#290B00]/90 backdrop-blur-md border-b border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-4">
           <div className="mx-auto max-w-6xl px-6 flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar">
+            <a
+              href="#capabilities"
+              className="whitespace-nowrap rounded-full px-4 py-1.5 text-xs font-semibold tracking-tight border border-[#290B00]/10 dark:border-[#F6F4F3]/15 bg-[#EAE5E2] dark:bg-[#381406] text-[#290B00]/70 dark:text-[#F6F4F3]/70 hover:text-[#290B00] dark:hover:text-[#F6F4F3] hover:bg-[#DDD6D2] dark:hover:bg-[#481C0C] transition-all"
+            >
+              Overview
+            </a>
             {featurePillars.map((pillar) => (
               <a
                 key={pillar.id}
@@ -312,6 +319,9 @@ function FeaturesPage() {
             </a>
           </div>
         </section>
+
+        {/* 8 Essential Capabilities Section */}
+        <FeatureGrid />
 
         {/* Feature Pillars Detailed Breakdown */}
         <div className="mx-auto max-w-5xl px-6 mt-16 space-y-24">

@@ -54,7 +54,7 @@ const capabilities = [
 
 export function FeatureGrid() {
   return (
-    <section id="features" className="border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-24 bg-[#F6F4F3] dark:bg-[#290B00]">
+    <section id="capabilities" className="scroll-mt-20 border-t border-[#290B00]/10 dark:border-[#F6F4F3]/10 py-24 bg-[#F6F4F3] dark:bg-[#290B00]">
       <div className="mx-auto max-w-6xl px-6">
         <div className="reveal max-w-2xl">
           <p className="text-sm font-semibold text-[#290B00] dark:text-[#F6F4F3] uppercase tracking-wider">Designed for Real Life</p>
