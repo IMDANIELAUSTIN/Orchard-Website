@@ -27,7 +27,7 @@ export function Hero() {
           >
             <a href={STORE_LINKS.testflight} target="_blank" rel="noopener noreferrer">
               <Apple className="size-5 mr-1" aria-hidden="true" />
-              Test Orchard Today on iOS
+              Test Orchard on iOS Now
             </a>
           </Button>
         </div>
