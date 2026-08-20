@@ -1,7 +1,6 @@
 import { Apple, Monitor, Watch, Github, Share2, Sparkles, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { STORE_LINKS } from "@/lib/store-links";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   Accordion,
   AccordionContent,
@@ -156,11 +155,6 @@ export function SiteFooter() {
             FAQ
           </a>
         </nav>
-
-        {/* Theme Toggle at bottom */}
-        <div className="flex items-center gap-3">
-          <ThemeToggle variant="segmented" />
-        </div>
       </div>
     </footer>
   );
