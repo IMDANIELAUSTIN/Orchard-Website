@@ -14,6 +14,7 @@ import {
   Monitor,
   Github,
   MessageSquare,
+  Mail,
   ArrowRight,
 } from "lucide-react";
 import { SiteHeader } from "@/components/landing/SiteHeader";
@@ -79,7 +80,7 @@ const categories = [
   "Mesh Radio & Chat",
   "Local Provisions & Mutual Aid",
   "Fediverse & Open Social",
-  "Hardware & Deployments",
+  "Sponsors and Future Products",
 ] as const;
 
 const allFaqs: FaqItem[] = [
@@ -179,6 +180,20 @@ const allFaqs: FaqItem[] = [
     answer:
       "Yes. Orchard's watchOS app receives critical broadcast alerts, displays offline emergency survival cards, and allows quick status replies directly from your wrist while your iPhone remains safely stored in a waterproof pack.",
   },
+  {
+    id: "mesh-5",
+    category: "Mesh Radio & Chat",
+    question: "Where can I find hardware assembly blueprints and solar repeater guides?",
+    answer:
+      "Complete 3D-printable enclosure models, solar panel wiring diagrams, and battery power management blueprints for standalone hilltop repeater stations are published in our open GitHub documentation repository.",
+  },
+  {
+    id: "mesh-6",
+    category: "Mesh Radio & Chat",
+    question: "Can schools, clinics, and rural libraries deploy Orchard in bulk?",
+    answer:
+      "Yes! Because Orchard is open source, educators and organizers can deploy Orchard across classroom sets of iPads or Macs without licensing fees, per-seat subscriptions, or internet provisioning requirements.",
+  },
 
   // Local Provisions & Mutual Aid
   {
@@ -226,27 +241,48 @@ const allFaqs: FaqItem[] = [
       "Yes. Whenever your device is connected to Wi-Fi or cellular, Orchard caches subscribed channels and threads in local storage so you can read long-form articles, forum discussions, and tutorials while disconnected.",
   },
 
-  // Hardware & Deployments
+  // Sponsors and Future Products
   {
-    id: "deploy-1",
-    category: "Hardware & Deployments",
-    question: "Can schools, clinics, and rural libraries deploy Orchard in bulk?",
+    id: "sponsor-1",
+    category: "Sponsors and Future Products",
+    question: "How is Orchard funded, and how can I support development?",
     answer:
-      "Yes! Because Orchard is open source, educators and organizers can deploy Orchard across classroom sets of iPads or Macs without licensing fees, per-seat subscriptions, or internet provisioning requirements.",
+      "Orchard is 100% independently developed and funded through voluntary community sponsorships, public goods grants, and open-source contributions. Because Orchard has no corporate investors, advertisements, or paid subscriptions, community sponsorships on our /pricing page (via GitHub Sponsors) directly sustain full-time Swift 6 development, infrastructure costs, and hardware prototyping.",
   },
   {
-    id: "deploy-2",
-    category: "Hardware & Deployments",
-    question: "Where can I find hardware assembly blueprints and solar repeater guides?",
+    id: "sponsor-2",
+    category: "Sponsors and Future Products",
+    question: "What hardware R&D (LoRa and Wi-Fi HaLow) does funding directly support?",
     answer:
-      "Complete 3D-printable enclosure models, solar panel wiring diagrams, and battery power management blueprints for standalone hilltop repeater stations are published in our GitHub documentation repository.",
+      "A primary portion of sponsorship funds is dedicated to physical hardware research and development for decentralized communications. We are actively developing custom LoRa packet radio nodes and long-range Wi-Fi HaLow (802.11ah) transceiver devices. Operating in the sub-gigahertz (900 MHz) spectrum, Wi-Fi HaLow enables multi-megabit data throughput over kilometer-scale distances at ultra-low power—allowing off-grid communities to transmit rich media, audio, and large Kiwix ZIM encyclopedic articles without cell towers or internet service.",
   },
   {
-    id: "deploy-3",
-    category: "Hardware & Deployments",
-    question: "How is the project funded, and how can I support development?",
+    id: "sponsor-3",
+    category: "Sponsors and Future Products",
+    question: "Why does Orchard strictly reject ads, data monetization, and venture capital?",
     answer:
-      "Orchard is supported by voluntary individual sponsorships, public goods grants, and code contributions. You can support continuous development, protocol research, and ZIM archive seeding through GitHub Sponsors on our /pricing page.",
+      "We believe that emergency communications, medical knowledge, and educational tools are fundamental human rights. Monetizing user data through advertising networks, tracking trackers, or selling personal metadata completely compromises user safety and sovereignty during crises. Orchard operates with zero telemetry and zero tracking, making community patrons and public grants our sole and trusted foundation.",
+  },
+  {
+    id: "sponsor-4",
+    category: "Sponsors and Future Products",
+    question: "Can I nominate or recommend Orchard for technology grants, fellowships, or scholarships?",
+    answer:
+      "Yes! We actively welcome nominations and introductions for open-source software grants, philanthropic research fellowships, digital public goods funds, and humanitarian technology grants. If you represent or know of a grantmaking institution, foundation, or academic fellowship, please reach out directly to Daniel Austin at hello@imdanielaustin.com.",
+  },
+  {
+    id: "sponsor-5",
+    category: "Sponsors and Future Products",
+    question: "What physical products, devices, and features are planned on the roadmap?",
+    answer:
+      "Our roadmap includes turnkey weatherproof solar mesh repeaters for mountaintop and rooftop deployment, plug-and-play Wi-Fi HaLow long-range radios, portable disaster resilience kits with preloaded local ZIM archives, and specialized offline vocational training curriculum bundles.",
+  },
+  {
+    id: "sponsor-6",
+    category: "Sponsors and Future Products",
+    question: "How can hardware engineers, academic institutions, or sponsors get in touch?",
+    answer:
+      "For custom hardware testing, academic research partnerships, institutional grant disbursements, or direct sponsorships, please email project founder Daniel Austin directly at hello@imdanielaustin.com.",
   },
 ];
 
@@ -402,16 +438,30 @@ function FaqPage() {
                   Community & Support
                 </div>
                 <h3 className="mt-2 text-2xl sm:text-3xl font-extrabold text-[#290B00] dark:text-[#F6F4F3]">
-                  Have a question not answered here?
+                  Have a question, grant lead, or partnership idea?
                 </h3>
                 <p className="mt-2 text-sm text-[#290B00]/70 dark:text-[#F6F4F3]/70 max-w-xl leading-relaxed">
-                  Join our open community on GitHub Discussions or connect with fellow mesh resilience operators and educators across the Fediverse.
+                  Join our open community on GitHub Discussions or contact Daniel Austin directly for hardware inquiries, grant nominations, and institutional sponsorships at{" "}
+                  <a href="mailto:hello@imdanielaustin.com" className="font-semibold text-[#290B00] dark:text-[#F6F4F3] underline hover:opacity-80">
+                    hello@imdanielaustin.com
+                  </a>.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3">
                 <Button
                   size="lg"
                   className="rounded-full bg-[#290B00] hover:bg-[#3D1405] text-[#F6F4F3] dark:bg-[#F6F4F3] dark:hover:bg-[#E5DED9] dark:text-[#290B00] font-semibold"
+                  asChild
+                >
+                  <a href="mailto:hello@imdanielaustin.com">
+                    <Mail className="size-4 mr-2" aria-hidden="true" />
+                    Email Daniel Austin
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full border border-[#290B00]/15 dark:border-[#F6F4F3]/20 bg-[#F6F4F3] dark:bg-[#381406] text-[#290B00] dark:text-[#F6F4F3] font-semibold hover:bg-[#EAE5E2] dark:hover:bg-[#481C0C]"
                   asChild
                 >
                   <a href={STORE_LINKS.github} target="_blank" rel="noopener noreferrer">
