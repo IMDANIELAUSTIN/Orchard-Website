@@ -2,7 +2,7 @@ import { Monitor, Github, Radio, ShieldCheck, WifiOff, BookOpen } from "lucide-r
 import { Button } from "@/components/ui/button";
 import { AppleLogo } from "@/components/icons/AppleLogo";
 import { STORE_LINKS } from "@/lib/store-links";
-import appPreview from "@/assets/app-preview.jpg";
+import heroAppPreview from "@/assets/hero-app-preview.png";
 
 export function Hero() {
   return (
@@ -36,10 +36,10 @@ export function Hero() {
         <div className="reveal delay-5 mt-12">
           <div className="mx-auto w-full max-w-4xl rounded-[40px] bg-[#F6F4F3] dark:bg-[#381406] p-3 sm:p-4 shadow-card border border-[#290B00]/10 dark:border-[#F6F4F3]/15">
             <img
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
-              alt="Orchard off-grid device interface and mesh network preview"
-              width={1600}
-              height={900}
+              src={heroAppPreview}
+              alt="Orchard iOS Library Interface on iPhone"
+              width={1024}
+              height={576}
               loading="eager"
               className="w-full rounded-[32px] object-cover"
             />

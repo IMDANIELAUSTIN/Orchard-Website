@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://orchard-website.lovable.app/" },
       { property: "og:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
       { property: "og:image:width", content: "1024" },
-      { property: "og:image:height", content: "537" },
+      { property: "og:image:height", content: "576" },
       { property: "og:image:type", content: "image/jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
