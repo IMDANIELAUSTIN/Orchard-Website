@@ -97,9 +97,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
       { property: "og:image:width", content: "1024" },
       { property: "og:image:height", content: "576" },
-      { property: "og:image:type", content: "image/jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Orchard — Resilient Knowledge & Mesh Network for Everyone" },
+      {
+        name: "twitter:description",
+        content:
+          "Peer-to-peer mesh communications, massive offline educational libraries, local mutual-aid food markets, and decentralized social feeds.",
+      },
       { name: "twitter:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
+      { name: "twitter:image:alt", content: "Orchard iOS Library Interface on iPhone" },
 
     ],
     links: [

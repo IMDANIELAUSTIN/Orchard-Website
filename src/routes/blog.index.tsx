@@ -23,7 +23,10 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:image:height", content: "576" },
       { property: "og:image:type", content: "image/jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
       { name: "twitter:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
+      { name: "twitter:image:alt", content: "Orchard Newsroom" },
     ],
     links: [
       { rel: "canonical", href: "https://orchard-website.lovable.app/blog" },

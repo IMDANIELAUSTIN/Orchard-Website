@@ -29,7 +29,10 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:image:height", content: "576" },
         { property: "og:image:type", content: "image/jpeg" },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: `${post.title} — Orchard Newsroom` },
+        { name: "twitter:description", content: post.excerpt },
         { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
+        { name: "twitter:image:alt", content: post.title },
       ],
       links: [
         { rel: "canonical", href: url },
