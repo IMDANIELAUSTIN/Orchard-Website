@@ -50,7 +50,7 @@ export const Route = createFileRoute("/faq")({
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
-      { name: "twitter:image:alt", content: "Orchard iOS Library Interface on iPhone" },
+      { name: "twitter:image:alt", content: "Orchard 3D app icon in orchard meadow" },
     ],
     links: [
       { rel: "canonical", href: "https://orchard-website.lovable.app/faq" },

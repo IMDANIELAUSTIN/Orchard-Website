@@ -37,7 +37,7 @@ export function Hero() {
           <div className="mx-auto w-full max-w-4xl rounded-[40px] bg-[#F6F4F3] dark:bg-[#381406] p-3 sm:p-4 shadow-card border border-[#290B00]/10 dark:border-[#F6F4F3]/15">
             <img
               src={heroAppPreview}
-              alt="Orchard iOS Library Interface on iPhone"
+              alt="Orchard 3D app icon in orchard meadow preview"
               width={1024}
               height={576}
               loading="eager"

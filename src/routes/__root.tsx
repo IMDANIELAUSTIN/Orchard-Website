@@ -105,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Peer-to-peer mesh communications, massive offline educational libraries, local mutual-aid food markets, and decentralized social feeds.",
       },
       { name: "twitter:image", content: "https://orchard-website.lovable.app/og-image.jpg" },
-      { name: "twitter:image:alt", content: "Orchard iOS Library Interface on iPhone" },
+      { name: "twitter:image:alt", content: "Orchard 3D app icon in orchard meadow" },
 
     ],
     links: [
